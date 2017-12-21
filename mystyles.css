@@ -1,0 +1,234 @@
+body {
+	margin: 0px;
+	padding:0px;
+	background-color: #F0F0F0;
+}
+#top {
+	
+	background-color: #363b40;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	margin-top: 0px;
+	display: block;
+}
+
+#main {
+	width: 50%;
+	margin-left: 25%;
+	height: 3000px;
+	background-color: #FFF;
+	border: 1px solid #000;
+	z-index: -1;
+
+}
+/* ADDING DISPLAY BLOCK AND FLOATS MAKE THE ELEMENT BE ABLE TO STAY ON SAME 
+   LINE AND NOT AFFECT EACH OTHER */
+#navigation {
+	
+	color: white;
+	text-decoration: none;
+	margin-top: 7px;
+	text-align: center;
+	z-index: 1;
+	display: block;
+	float: left;
+	
+}
+#navigation li {
+	float: left;
+	padding: 5px;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+
+}
+#navl {
+	
+	color: white;
+	text-decoration: none;
+}
+#navigation a:hover {
+	background-color: white;
+}
+.mathheader {
+	float: left;
+	
+	
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+   
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	list-style-type: none;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+
+}
+.dropdown-content li {
+	list-style-type: none;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+#banner {
+	background-image:url('http://i10.photobucket.com/albums/a147/babybrown101/Justice_League.jpg');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ex {
+	background-color: orange;
+}
+.first {
+	color: white;
+	margin-top: 10px;
+	width: 300px;
+	text-align: center;
+	display: block;
+	font-family: Georgia;
+	text-transform: uppercase;
+	float: left;
+}
+
+p {
+	color: black;
+	margin: 0px;
+}
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	text-align: center;
+	display: block;
+}
+
+h1 {
+	margin: 0px;
+	padding:0px;
+}
+h2 {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	margin-right: 0px;
+}
+h3 {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+a:hover {
+	background-color: orange;
+	margin: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+	
+}
+td{
+	border: 1px solid orange;
+}
+
+.mathButton {
+	background-color: #4CAF50;
+	
+	font-family: Arial Black;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	color: white;
+}
+#horodiv {
+	display: none;
+	
+	
+}
+#calc_div {
+	display: none;
+	
+}
+#result {
+	background-color: orange;
+	display:none;
+	
+	padding: 15px;
+	font-size: 20px;
+}
+
+.thebutton {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	border:none;
+	
+}
+.thebuttonx {
+	background-color: red;
+	color: white;
+	padding: 16px;
+	border:none;
+}
+
+
+/* Mobile */
+@media only screen 
+and (min-device-width : 1280px) 
+and (max-device-width : 720px) {
+body {
+	margin: 0px;
+	padding:0px;
+	background-color: #F0F0F0;
+}
+#main  {
+	width: 500px;
+}
+#top {
+	background-color: #363b40;
+	height: 50px;
+	width: 500px;
+	position: fixed;
+	margin-top: 0px;
+	display: block;
+}
+}

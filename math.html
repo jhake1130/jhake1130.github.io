@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>Jame's the Geek</title>
+<link rel="stylesheet" type="text/css" href="mystyles.css">
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+	<header id="top">
+	<h3 class="first">Jame's the Geek</h3>
+	<ul id="navigation">
+		<li><a href="file:///C:/Users/James/Downloads/Comp/HTML%20Projects/projects.html" id="navl">Home</a></li>
+		<li><a href="file:///C:/Users/James/Downloads/Comp/HTML%20Projects/projectspage.html" id="navl">Projects</a></li>
+		<li><a href="file:///C:/Users/James/Downloads/Comp/HTML%20Projects/math.html" id="navl">Math</a></li>
+		<li><a href="file:///C:/Users/James/Downloads/Comp/HTML%20Projects/comics.html" id="navl">Comics</a></li>
+	</ul>
+	</header>
+	<div id="main">
+		<br><br><br><br>
+		
+		<h1 class="mathheader">Math</h1>
+		<center>
+		<div class="dropdown">
+  <button onclick="showUnit1()" class="dropbtn">Unit 1</button>
+  <div id="dropdown1" class="dropdown-content">
+		<li><a href="#103">1.03</a></li>
+		<li><a href="#105">1.05</a></li>
+		<li><a href="#106">1.06</a></li>
+  </div>
+  <button onclick="showUnit2()" class="dropbtn">Unit 2</button>
+  <div id="dropdown2" class="dropdown-content">
+		<li><a href="#201">2.01</a></li>
+		<li><a href="#202">2.02</a></li>
+		<li><a href="#203">2.03</a></li>
+		<li><a href="#205">2.05</a></li>
+		<li><a href="#206">2.06</a></li>
+		<li><a href="#208">2.08</a></li>
+  </div>
+  <button onclick="showUnit3()" class="dropbtn">Unit 3</button>
+  <div id="dropdown3" class="dropdown-content">
+		<li><a href="#301">3.01</a></li>
+		<li><a href="#302">3.02</a></li>
+		<li><a href="#303">3.03</a></li>
+		<li><a href="#305">3.05</a></li>
+		<li><a href="#306">3.06</a></li>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function showUnit1() {
+    document.getElementById("dropdown1").classList.toggle("show");
+}
+function showUnit2() {
+    document.getElementById("dropdown2").classList.toggle("show");
+}
+function showUnit3() {
+    document.getElementById("dropdown3").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+		
+		<hr>
+		<h2 id="103">1.03</h2>
+		</center>	
+		<p><strong>Variable</strong> a letter which holds an unknown value <span class="ex">EX</span> m</p>
+		
+		<p><strong>Numerical Expression</strong> a number or a group of numbers that are +, -, *, and /
+		<span class="ex">EX</span> 4+ 6</p>
+		
+		<p><strong>Algebraic Expression</strong> a number or variable, or a group of numbers and variables
+		that are added, subtracted, multiplied, or divided <span class="ex">EX</span> x - 5</p>
+		
+		<p><strong>Term</strong> a number, variable, or combinations of both <span class="ex">EX</span> 4 |5x</p>
+		
+		<p><strong>Coefficient</strong> When combining variables and a number to write a term, the number is
+		always listed first and called coefficient <span class="ex">EX</span> 2x</p>
+		
+		<p><strong>Like Terms</strong> always have the same variable, but different numbers
+		<span class="ex">EX</span> 2x + 5x <span class="ex">EX</span> 6y - 3y
+		<span class="ex">EX</span> 2x and 5y are <strong>not</strong> like terms. Like terms 
+		<strong>always</strong> have the same variable and power</p>
+		
+		<p><strong>Combining Like Terms</strong> is the process of adding and subtracting like terms to simplify
+		an expression <span class="ex">EX</span> 5x + 6x = 11x <span class="ex">EX</span> 5x - 2y + 2x | 7x -2y </p>
+		
+		<p><strong>Substitution</strong> is when a variable is holding a place for an unknown number
+		<span class="ex">EX</span> 2x - y - 3z| x is 4, y is -3, z is -1 | 2(8) - -3 - 3(-1) | =14</p>
+			<hr>
+		
+		<center><h2 id="105">1.05</h2></center>
+		<p><strong>Distributive Property</strong> is the process of multiplying a term to a sum</p>
+		
+		<h3>Distributive Property with Multiplication</h3>
+		<p><span class="ex">EX</span> 5(m +6) turns into 5m+30</p>
+		<p><span class="ex">EX</span> 3(h -7) turns into 3h -21</p>
+		<p><span class="ex">EX</span> -9(x-2) turns into 9x+ 18</p>
+		<p><span class="ex">EX</span> 7p -2(6p + 3) turns into 7p -12p -6</p>
+		<p><span class="ex">EX</span> 4(k-3) -2k turns into 4k -12 -2k then into 2k -12</p>
+		
+		<h3>Distributive Property with Division</h3>
+		<p><span class="ex">EX</span> 3x + 15/3, divide everything by 3, so it turns into x+5</p>
+		<p><span class="ex">EX</span> -2x + 8/2, divide everything by 2, so it turns into x-4</p>
+		<p><span class="ex">EX</span> 2 -8x/-2, divide everything by -2, so it turns into 4x</p>
+		<p><span class="ex">EX</span> -(6+ y) is the same as -1(6 + y)</p>
+			<hr>
+			
+		<center><h2 id="106">1.06</h2></center>
+		<h3>Phrases</h3>
+		<p><strong>Addition Terms</strong> sum of, more than, increased by, and total</p>
+		<p><strong>Subtraction Terms</strong> difference of, minus, less than, decreased by, and subtracted from</p>
+		<p><strong>Multiplication Terms</strong> product of, times, percent of, per, twice for 2 times, and triples for 3 times</p>
+		<p><strong>Division Terms</strong> quotient of, ratio of, half of if dividing by 2, and third of if dividing by 3</p>
+		<p><span class="ex">EX</span> 5 subtracted from 10 is 10-5</p>
+		<p><span class="ex">EX</span> the sum of x and 2 is x+2</p>
+		<p><span class="ex">EX</span> x decreased by -15 is x-15</p>
+		<p><span class="ex">EX</span> the product of a and b is ab</p>
+		<p><span class="ex">EX</span> twice the sum of x and 5 is 2(x+ 5)</p>
+		<p><span class="ex">EX</span> the quantity of n minus 6 cubed is (n-6)3</p>
+		<p><span class="ex">EX</span> one less than 6 is 6-1</p>
+			<hr>
+		
+		<center><h2 id="201">2.01</h2></center>
+		<h3>Properties</h3>
+		<p><strong>Commutative Property of Addition and Multiplication</strong> numbers can move around and change
+		order, they commute <span class="ex">EX</span> 5+2 can be 2+5</p>
+		<p><strong>Associative Property of Addition and Multiplication</strong> You move numbers around
+		and they are the same <span class="ex">EX</span> 1 + (2+3) is the same as (1+2) + 3 </p>
+		<p><strong>Equality</strong> means the same so use the = sign to show that</p>
+		<h3>Properties of Equality</h3>
+		<p><strong>Reflexive Property</strong> 5=5, is the same thing on both sides</p>
+		<p><strong>Symmetric Property</strong> 3= 2y+ 1 or 2+1 =3, symmetry is one side is same as the
+		other, basically flipping it</p>
+		<p><strong>Transitive Property</strong> If a=b and b=c then a =c, think three parts</p>
+		<p><span class="ex">EX</span> 4+x = x+4 is Commutative</p>
+		<p><span class="ex">EX</span> a+b = 4 so 4 = a+b is Symmetric</p>
+		<h3>True and False Equations</h3>
+		<p><span class="ex">EX</span> 10 = 10 is <strong>true</strong>, 5 = 3 is <strong>false</strong></p>
+		<p><span class="ex">EX</span> 5+ 7 = 3 +9 is <strong>true</strong></p>
+		<h3>Examples</h3>
+		<p><span class="ex">EX</span> 4 *(x * y) = (4 * x) * y is Associative</p>
+		<p><span class="ex">EX</span> 10 = 10 is Reflexive</p>
+		<p><span class="ex">EX</span> 4 * 10 = 10 * 4 is Commutative</p>
+			<hr>
+		<center><h2 id="202">2.02</h2></center>
+		<p>With <strong>ALL</strong> equations, the goal is to isolate the variable and determine the solution. 
+		When doing equations with multiple steps, equations are like scales, you have to keep them balanced
+		what you do to one side of an equation you must to do the other</p>
+		<strong><p>YOU CAN CHECK BY SUBSITUTING THE NUMBER YOU GET IN THE ORIGINAL EQUATION</p></strong>
+		<p><span class="ex">EX</span> x - 7 = 11, add 7 to both sides so x=11</p>
+		<p><span class="ex">EX</span> 2x + 7 = 15, minus 7 to both sides so 2x=8, then divide both 
+		numbers by 2 so x =4</p>
+		<p><span class="ex">EX</span> 5x -6 =19,, add 6 to both sides, 5x =25, then divide both numbers by 5
+		to get x=5. </p>
+		<p><span class="ex">EX</span> 3x - 7 =5, add 7 to both sides, 3x = 12, divide by 3 on both sides
+		to get x =4</p>
+		<p><span class="ex">EX</span> 3x + 2 - 6x + 6 = 29, combine like terms to get -3x + 8 = 29, minus 8
+		from both sides, -3x = 21, then divide by -3 to both numbers to get x = -7</p>
+		<p><span class="ex">EX</span> 2(x + 4) = 10, distribute the 2, 2x + 8 =10, then minus 8 from both sides,
+		2x = 2, divide by 2 to both sides, to get x =1</p>
+			<hr>
+		<center><h2 id="203">2.03</h2></center>
+			<h3>Equations with variables on both side</h3>
+			<p><span class="ex">EX</span> 3x + 3 = 2x+ 5, -3 from both sides, 3x= 2x+ 2, minus 2x from 3x to get
+			x =2
+			</p> 
+			<p><span class="ex">EX</span> 2x + 3 = 6x -5, minus the 2x, 3= 4x -5, add the 5 to both sides,
+			8= 4x, now divide 4 to both numbers to get x=2</p>
+			<p><span class="ex">EX</span> 8+2(x +3) = 3(x+4), distribute, 8 +2x + 6 = 3x+ 12, then add the 8
+			to 6, 2x+ 14 = 3x+12, then minus the 2x from both sides, 14 =x+ 12, then minus the 12 to get 2 =x</p>
+			<p><span class="ex">EX</span> 2x - 6 =2(x-3), distribute, 2x - 6 = 2x -6, minus the 2x, -6 = -6</p>
+			<hr>
+		<center><h2 id="205">2.05</h2></center>
+			<p><span class="ex">EX</span> Twice a number added to seven equals 23 is a guessing game so
+			2n + 7 = 23, n being the number I do not know</p>
+			<p><span class="ex">EX</span> Find a number, when decreased by 18 is 5 times its opposite, so
+			n-18 = 5(-n)</p>
+			<p><span class="ex">EX</span> The number of malls Virginia is 21 less then half the number of malls
+			in NC. So 242 = m/2 -21.</p>
+			<p><span class="ex">EX</span> John is eleven times as old as his son Marcus, in 12 years, John will
+			be three times as old as Marcus, what is Marcus's age now? So make a table
+			<table><td>Name</td><td>Age Now</td><td>Age in 12 yrs</td> <tr> <td>Marcus</td><td>x</td><td>x+12</td>
+			<tr> <td>John</td><td>11x</td><td>11x + 12</td></table>John's age in 12 years is 11x+ 12
+			and three times is 3(x+12) and the dads age in 12 years. So 11x + 12 = 3(x+ 12), then do equation
+			to get x =3. So his age now is 3</p>
+			<p><strong>Consecutive Integers</strong> numbers right beside each other on a number line</p>
+			<p><strong>Consecutive Even Integers</strong> -4,-2,0,2,4,6,8,etc</p>
+			<p><strong>Consecutive Odd Integers</strong> -3,-1,1,3,5,7,etc</p>
+			<p><strong>ANYTIME YOU HEAR A WORD PROBLEM WITH THE WORD CONSECUTIVE INTEGERS, YOU REPRESENT
+			THE FIRST INTEGER WITH X, THE NEXT WITH X+1, THE NEXT X+2</strong></p>
+			<p><span class="ex">EX</span>x + (x+1) + (x+2) = 75, add the x's and the numbers, 3x + 3 =75,
+			then you get x =24</p>
+			<p><span class="ex">EX</span>The sum of two consecutive even integers is 132, find the integers,
+			x+ (x+2) + (x+4) = 132. You skip by 1 because it is even integers, then do the same instructions
+			like above to get x =42</p>
+			<p><span class="ex">EX</span> </p>
+			<hr>
+		<center><h2 id="206">2.06</h2></center>
+			<p>When multiplying fractions, multiply across then simplify.</p>
+			<p><span class="ex">EX</span> 2/3 * 5/6 = 10/18 then simplified to 5/9</p>
+			<p><span class="ex">EX</span> Reciporical is flipped, so 1/5 to 5/1</p>
+			<p><span class="ex">EX</span> When you multiply a fraction by its denominator, the answer is
+			the numerator so 3/5 then 3/ 5* 5 <strong>or</strong> 15/5 is now 3 because I put 5 in 15 3 times</p>
+			<p><span class="ex">EX</span> 4/5x + 2 = 22, times every number by 5, 5/1 * 4/5x + 10 = 110,
+			then times 5 into 4 and 1 into 5, and then put 5 into 20 4 times to get 4x + 10 = 110. Then do
+			regular equation solving to get x = 25</p>
+			<p><span class="ex">EX</span> 2/3(v+ 8) = -8, to, 3 * 2/3(v+8) = 3*-8, to, 3/1 * 2/3(v+8) = -24
+			to, 2/1(v+8) = -24, to 2v + 16 = -24 to get the answer v = -26</p>
+			<p><span class="ex">EX</span> 5+ x/4 = -1, to 5+x = -4, to x = -9</p>
+			<p><span class="ex">EX</span> 1/4n - 4 =0, to 4* 1/4n - 4*4 = 0, to 4/1 * 1/4n -16 = 0, to n=16</p>
+			<hr>	
+			
+		<center><h2 id="301">3.01</h2></center>
+			<p><strong>Venn Diagrams</strong> visual representations of a group of things aka a set</p>
+			<p><strong>Set</strong> a collection of numbers or objects, venn diagrams are used to see the
+			relationship between sets</p>
+			<p><strong>The numbers in a set are called members or elements of a set</strong></p>
+			<p>You can use the <strong>....</strong>symbol showing the set continues in the same pattern</p>
+			<p><strong>Empty sets</strong> are sets that are empty or have no members and written like (), or a zero 
+			with a line thru it</p>
+			<p><strong>Subset</strong> if every element of one set is also listed in another set, it is called
+			a subset of the larger set</p>
+				<p><span class="ex">EX</span> B:(integers greater than zero) can be written like B:(1,2,3,4,...)</p>
+				<p><span class="ex">EX</span> (carbonated drinks) and a subset of that is cherry flavored carbonated drinks </p>
+				<p><span class="ex">EX</span> (small fury animals) and a subset of that is (small fury animals that are red)</p>
+				<p><span class="ex">EX</span> (2,4,6,8) a subset of that is (2)</p>
+				<p><span class="ex">EX</span> </p>
+			<hr>
+		
+		<center><h2 id="302">3.02</h2></center>
+			<p><strong>Union</strong> in math, a union is everything in two or more sets coming together
+			to make one larger set, if there are 2 sets a and b, it'll be written like AUB</p>
+			<p><strong>Intersection</strong> the intersection of two or more sets represent the items that are the same
+			in both sets like A:(2,4,5) B:(1,4,6) and the intersection is A upside down U, then B</p>
+			<p><span class="ex">EX</span> A:(-1,2,3), B:(2,4,6), Find A intersection B, which is (2)</p>
+			<p><span class="ex">EX</span> C:(letters in the alphabet) D:(vowels in the alphabet),
+			the answer is (a,e,i,o,u), it is a subset</p>
+			<hr>
+		
+		<center><h2 id="303">3.03</h2></center>
+			<p><strong>Complements</strong> is something that does not fit with sets and written like 
+			V, or ', so basically the opposite</p>
+			<p><strong>Cross Product</strong> of two sets is written using the x letter, and results in a third set
+			that contains pairs of elements</p>
+			<p><span class="ex">EX</span> C:(1,2,3,4,5), D:(r,s,t,l,n,c), Find CxD, so the total elements in 
+			the first set is 5, and the second is 6 so 5x6, so total of 30 elements </p>
+			<p><span class="ex">EX</span> </p>
+			<hr>
+			
+		<center><h2 id="305">3.05</h2></center>
+			<p><strong>Relation</strong> simply describes a relationship & pairs input values with output values
+			</p>
+			<p><strong>Domain</strong> of a relation is the possible input values so X</p>
+			<p><strong>Range</strong> of a relation is the possible output values so Y</p>
+			<p><strong>X is first, Y is second</strong></p>
+			<p><span class="ex">EX</span> </p>
+			<p><span class="ex">EX</span> </p>
+			<hr>
+			
+		<center><h2 id="306">3.06</h2></center>
+			<p><strong>Function notation</strong> is used to write the equation of a function, it simply
+			sets an expression. written like f(x) </p>
+			<p><strong></strong></p>
+			<p><span class="ex">EX</span> </p>
+			<hr>
+			
+		
+		
+	</div>
+</body>
+</html>
