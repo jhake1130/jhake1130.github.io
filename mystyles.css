@@ -7,7 +7,7 @@ body {
 	background-image: url(https://wallpapercave.com/wp/Wa1UXUT.jpg);	
 	background-repeat:no-repeat;
 }
-.homeh2 {
+.textforhome {
     color: white;
     margin: 0px;
     padding-top: 50px;
@@ -15,9 +15,8 @@ body {
     margin-right: auto;
     font-family: Heebo;
     font-size: 4.0em;
-    /* letter-spacing: 5px; */
-    opacity: 0.9;
-    text-shadow: 1px 1px green;
+     letter-spacing: 1px; 
+    text-shadow: 5px 1px black;
 }	
 #top {
 	
