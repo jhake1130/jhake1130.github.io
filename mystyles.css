@@ -6,15 +6,18 @@ body {
 #bodybg {
 	background-image: url(https://wallpapercave.com/wp/Wa1UXUT.jpg);	
 }
-#homepagemain {
-	padding-top: 50px;
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	height: 500px;
-	background-color: #FFF;
-	
-}
+.homepageh2 {
+    color: white;
+    margin: 0px;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Heebo;
+    font-size: 4.0em;
+    /* letter-spacing: 5px; */
+    opacity: 0.9;
+    text-shadow: 1px 1px green;
+}	
 #top {
 	
 	background-color: #363b40;
