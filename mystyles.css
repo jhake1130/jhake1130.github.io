@@ -6,6 +6,14 @@ body {
 #bodybg {
 	background-image: url(https://wallpapercave.com/wp/Wa1UXUT.jpg);	
 }
+#homepagemain {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 500px;
+	background-color: #FFF;
+	
+}
 #top {
 	
 	background-color: #363b40;
