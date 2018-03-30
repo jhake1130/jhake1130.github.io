@@ -21,6 +21,7 @@ body {
 	background-color: #FFF;
 	border: 1px solid #000;
 	z-index: -1;
+	padding-top: 50px;
 
 }
 /* ADDING DISPLAY BLOCK AND FLOATS MAKE THE ELEMENT BE ABLE TO STAY ON SAME 
