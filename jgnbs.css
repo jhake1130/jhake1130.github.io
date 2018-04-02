@@ -119,7 +119,7 @@ body {
 /*MOBILE*/
 
 /*for the gallery*/
-@media screen and (max-width:1000px ) {
+@media screen and (max-width:1050px ) {
   .thumbnail {
     width: 46%;
   }
