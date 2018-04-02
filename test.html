@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!-- i took out user scalable -->
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="jgnbs.css">
+</head>
+<body>
+  <nav class="topnav" id="myTopnav">
+		<a>Jame's Projects</a>
+	  <a href="#home" class="">Home</a>
+	  <a href="#news">Projects</a>
+	  <a href="#contact">Math</a>
+	  <a href="#about">Comics</a>
+	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </nav>
+
+	<div class="onlyifscreensmaller"><p>Any further and you'll get the hamburger</p></div>
+
+	<div class="jumbotron">
+		<div class="container">
+        <h2>Welcome to James Geek</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+  </div>
+
+  <div class="home">
+	   <div class="container">
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	   </div>
+
+	 <div class="gallery">
+      <img src="lucy8.jpg" class="thumbnail"> 
+      <img src="lucy9.jpg" class="thumbnail"> 
+
+      <img src="lucy4.jpg" class="thumbnail">
+      <img src="lucy5.jpg" class="thumbnail"> 
+      <img src="lucy6.jpg" class="thumbnail"> 
+
+      <img src="lucy7.jpg" class="thumbnail"> 
+      <img src="lucy8.jpg" class="thumbnail">
+      <img src="lucy9.jpg" class="thumbnail">
+
+	 </div>
+	</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>
