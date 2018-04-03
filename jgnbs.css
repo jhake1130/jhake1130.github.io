@@ -4,7 +4,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #1b2631;
+  background-color: #000;
   position:fixed;
   right: 0;
   left: 0;
@@ -185,8 +185,10 @@ body {
 
 @media screen and (max-width: 600px) {
 
- .topnav.responsive {position: relative;}
-
+ .topnav.responsive {position: relative;
+	 
+}
+ 
  .topnav.responsive .icon {
     position: absolute;
     right: 0;
