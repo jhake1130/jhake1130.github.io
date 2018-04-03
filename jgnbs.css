@@ -1,10 +1,15 @@
 body {
   	margin: 0;
 }
-
+.classbody.responsive {
+  background: black;
+}
+.thumbnail.responsive {
+  background: black;
+}
 .topnav {
   overflow: hidden;
-  background-color: #000;
+  background-color: #1b2631;
   position:fixed;
   right: 0;
   left: 0;
@@ -27,7 +32,7 @@ body {
 }
 
 .topnav a:first-child {
-  font-family: Georgia;
+  font-family: Raleway;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -61,18 +66,13 @@ body {
 .container {
 	margin-left: auto;
 	margin-right:auto;
-	width: 50%;
+	width: 75%;
 }
 
 .container h2 {
 	font-size: 63px;
 	font-family: Raleway;
-}
-
-.onlyifscreensmaller {
-	background: red;
-	height:250px;
-	height:250px;
+  margin-bottom:15px;
 }
 
 /*.gallery img {
@@ -123,16 +123,17 @@ body {
   .thumbnail {
     width: 46%;
   }
+
 }
 
+@media screen and (max-width: 850px) {
+  .jumbotron {
+    height: 600px;
+  }
+}
 
 /*These styles only apply if the screen is below 600px*/
 @media screen and (max-width: 600px) {
-/*When screen is smaller than 600px, the first a elements font-size increases*/
-/*.topnav a:first-child { 
-  	font-size:23px; 
-  	font-family: ;
- }*/
 
 .topnav a:not(:first-child) {
 	display: none;
@@ -155,7 +156,6 @@ body {
 	max-width: 95%;
 }
 
-
 .jumbotron {
 	height:600px;
 }
@@ -163,29 +163,32 @@ body {
 
 @media screen and (max-width: 600px) {
 
-.topnav.responsive a:first-child {
-		background: #000;
-	}
- .topnav.responsive {position: relative;
-	 background: transparent;
-	 color:white;
+ .topnav.responsive {
+  position: fixed;
+  background: black;
 }
- 
+.topnav.responsive a:first-child { 
+    background: black;
+ }
+
  .topnav.responsive .icon {
+    padding-right:15px;
     position: absolute;
     right: 0;
     top: 0;
  }
 
  .topnav.responsive a:not(:first-child) {
-  	background: #000;
-	 color: white;
+  	background: rgb(40,40,40);
  }
 
- .topnav.responsive a {
+ .topnav.responsive a, .topnav.responsive .navright {
     float: none;
-    display: block;
+    display:block;
     text-align: left;
     clear: left;
+    padding-right:0;
+    margin-right:0;
   }
+
 }
