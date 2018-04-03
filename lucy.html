@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Gallery of Lu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <!-- i took out user scalable -->
 <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
@@ -17,6 +17,10 @@
       background-repeat: no-repeat; 
       background-size: cover;
   }
+  .topnav {
+        background: transparent;
+
+  }
   .topnav a:first-child {
     text-transform:none;
   }
@@ -24,24 +28,13 @@
   float:right;
   margin-right:15px;
 }
-.jumbotron {
-	text-shadow: 5px 5px 4px black;
-}
-	
-@media screen and (max-width:600px ) {
- .jumbotron {
-  /*  background-size: auto;*/
-    background-image: url(https://i.imgur.com/PhBcxn1.jpg);
-  }
-
-
-}
 </style>
 </head>
-<body>
+<body class="classbody" id="bodydark">
   <nav class="topnav" id="myTopnav">
 		<a>Gallery of Lu</a>
-	  <a href="#home" class="">Home</a>
+	  <a href="http://jhake1130.github.io/test.html">Home</a>
+    <a onclick="darktheme()">Dark Theme</a>
     <a href="#sign" class="navright">Login</a>
     <a href="#sign" class="navright">Signup</a>
 	  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
@@ -51,12 +44,12 @@
 
 	<div class="jumbotron">
 		<div class="container">
-        <h2>Welcome to the Lucy Gallery</h2>
-        <p>Prepare to be overwhelmed by delicous</p>
+        <h2 class="starthere">Welcome to the Lucy Gallery</h2>
+        <p>Prepare to be overwhelmed by delicious</p>
     </div>
   </div>
 
-  <div class="home">
+  <div class="home" id="homedark">
 
 	 <div class="gallery">
       <img src="https://i.imgur.com/YtfPGyF.jpg" class="thumbnail"> 
@@ -73,15 +66,5 @@
 	 </div>
 	</div>
 
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
 </body>
 </html>
