@@ -128,11 +128,6 @@ body {
 
 /*These styles only apply if the screen is below 600px*/
 @media screen and (max-width: 600px) {
-
-.onlyifscreensmaller {
-	display:none;
-}
-
 /*When screen is smaller than 600px, the first a elements font-size increases*/
 /*.topnav a:first-child { 
   	font-size:23px; 
@@ -172,7 +167,8 @@ body {
 		background: red;
 	}
  .topnav.responsive {position: relative;
-	 
+	 background: #000;
+	 color:white;
 }
  
  .topnav.responsive .icon {
