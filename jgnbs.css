@@ -70,9 +70,10 @@ body {
 }
 
 .container h2 {
-	font-size: 63px;
-	font-family: Raleway;
-  	margin-bottom:0;
+  padding-top:2.5%;
+  font-size: 63px;
+  font-family: Raleway;
+  margin:0;
 }
 
 /*.gallery img {
