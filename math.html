@@ -1,64 +1,20 @@
 <html>
 <head>
-<title>Jame's Projects</title>
+<title>Jame's Projects Math</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-<link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="jcss.css">
 <style type="text/css">
-	.navbar-default .navbar-nav > li > a:hover,
-	.navbar-default .navbar-nav > li > a:focus {
- 			color: white;
-  			background-color: #090d10;
+	h1 {
+		padding-top:0;
+		margin-top:50px;
 	}
-	.navbar {
-			margin-bottom:0;
-			border:0;
-	}
-
-	.navbar-default {
- 			background: rgba(27,38,49, 1);
-  			border-color: #e7e7e7;
-  			border-radius: 0;
-		}
-	.navbar-default .navbar-brand {
-  			color: white;
-		}
-	.navbar-brand {
-			font-family: Raleway;
-			text-transform: uppercase;
-		}
-	.navbar-default .navbar-brand:hover {
-  	color: white;
-  	background-color: transparent;
-		}
-	.navbar-default .navbar-nav > li > a {
-  			color: white;
-  			font-family: sans-serif;
-		}
-
-	.navbar-toggle .icon-bar {
- 		display: block;
-  		width: 22px;
-  		height: 2px;
-  		border-radius: 1px;
-  		color: #2c3e50;
-	}
-	.navbar-default .navbar-toggle .icon-bar {
-	background-color:white;
-}
-	.navbar-default .navbar-toggle {
-	border:0;
-}
-	.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: transparent;
-}
-	.navbar-default .navbar-collapse {
-	border:0;
+	hr {
+		width:100%;
 	}
 </style>
 </head>
@@ -86,104 +42,42 @@
 		<div>
 	</nav>
 
-	<div id="main">
-		<div class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Unit 1
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" "#103">1.03</a>
-          <a class="dropdown-item""#105">1.05</a>
-          <a class="dropdown-item" #106">1.06</a>
-        </div>
-      </li>
-					<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Unit 1
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" "#103">1.03</a>
-          <a class="dropdown-item""#105">1.05</a>
-          <a class="dropdown-item" #106">1.06</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 		
 		<h1 class="mathheader">Math</h1>
 		<center>
-		<div class="dropdown">
-  <button onclick="showUnit1()" class="dropbtn">Unit 1</button>
-  <div id="dropdown1" class="dropdown-content">
-		<li><a href="#103">1.03</a></li>
-		<li><a href="#105">1.05</a></li>
-		<li><a href="#106">1.06</a></li>
-  </div>
-  <button onclick="showUnit2()" class="dropbtn">Unit 2</button>
-  <div id="dropdown2" class="dropdown-content">
-		<li><a href="#201">2.01</a></li>
-		<li><a href="#202">2.02</a></li>
-		<li><a href="#203">2.03</a></li>
-		<li><a href="#205">2.05</a></li>
-		<li><a href="#206">2.06</a></li>
-		<li><a href="#208">2.08</a></li>
-  </div>
-  <button onclick="showUnit3()" class="dropbtn">Unit 3</button>
-  <div id="dropdown3" class="dropdown-content">
-		<li><a href="#301">3.01</a></li>
-		<li><a href="#302">3.02</a></li>
-		<li><a href="#303">3.03</a></li>
-		<li><a href="#305">3.05</a></li>
-		<li><a href="#306">3.06</a></li>
-  </div>
+	<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Unit 1
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#103">1.03</a>
+    <a class="dropdown-item" href="#105">1.05</a>
+    <a class="dropdown-item" href="#106">1.06</a>
 </div>
 
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function showUnit1() {
-    document.getElementById("dropdown1").classList.toggle("show");
-}
-function showUnit2() {
-    document.getElementById("dropdown2").classList.toggle("show");
-}
-function showUnit3() {
-    document.getElementById("dropdown3").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+    <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Unit 2
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#201">2.01</a>
+    <a class="dropdown-item" href="#202">2.02</a>
+    <a class="dropdown-item" href="#203">2.03</a>
+    <a class="dropdown-item" href="#205">2.05</a>
+    <a class="dropdown-item" href="#206">2.06</a>
+    <a class="dropdown-item" href="#208">2.08</a>
+</div>
+   <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Unit 3
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#301">3.01</a>
+    <a class="dropdown-item" href="#303">3.03</a>
+    <a class="dropdown-item" href="#305">3.05</a>
+    <a class="dropdown-item" href="#205">2.05</a>
+    <a class="dropdown-item" href="#206">2.06</a>
+    <a class="dropdown-item" href="#306">3.06</a>
+</div>
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-		
-		<hr>
 		<h2 id="103">1.03</h2>
 		</center>	
 		<p><strong>Variable</strong> a letter which holds an unknown value <span class="ex">EX</span> m</p>
