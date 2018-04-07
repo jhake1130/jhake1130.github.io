@@ -59,6 +59,10 @@
 	border:0;
 }
 
+.navbar-right {
+	margin-right:50px;
+}
+
 h1 {
 	padding-top: 25%;
 	font-weight: 700;
