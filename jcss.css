@@ -35,7 +35,7 @@
 
 .navbar-default .navbar-brand:hover {
   		color: white;
-  		background-color: transparent;
+  		background-color: #0d0d0d;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
