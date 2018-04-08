@@ -9,26 +9,64 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="jcss.css">
 <style type="text/css">
-	h1 {
+	h2 {
 		padding-top:0;
-		margin-top:50px;
+		text-align:center;
+	}
+
+	h3 {
+		/*text-align: center;*/
 	}
 	hr {
 		width:100%;
 	}
 	.mathheader {
+		padding: 5px 15px 5px 10px;
+		margin-top:50px;
+		display:inline-block;
+		font-size:2.5em;
+	}
+	
+	.btn-lg {
+		padding: 5px 10px;
+	}
+	.mathnav {
+		margin-top: 20px;
+		position:fixed;
+		display:block;
+		background: white;
+		width: 100%;
+		text-align: center;
+		z-index:1000;
+	}
+	.dropdown {
 		display:inline-block;
 	}
-	h2 {
-		padding-top:5px;
+	.mathnotes {
+		padding-top: 120px;
 	}
+
+@media screen and (max-width: 400px) {
+	.mathheader {
+		display:block;
+
+	}
+  	.mathnav {
+		margin-top: 5px;
+		
+	}
+	.mathnotes {
+		padding-top:135px;
+	}
+}
+
 </style>
 </head>
 
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="navbar-header">
-			<a href="http://jhake1130.github.io" class="navbar-brand">Jame's Projects</a>
+			<a href="#" class="navbar-brand">Jame's Projects</a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-to-hide" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
 			        <span class="icon-bar"></span>
@@ -43,57 +81,60 @@
 					<li><a href="https://jhake1130.github.io/math.html">Math</a></li>
 					<li><a href="https://jhake1130.github.io/comics.html">Comics</a></li>
 				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="https://jhake1130.github.io/lucy.html">Lu</a></li>
-				</ul>
-
 			</div>
-		<div>
+		
 	</nav>
 
-		
-		<h1 class="mathheader">Math</h1>
-		
-	<div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Unit 1
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#103">1.03</a>
-    <a class="dropdown-item" href="#105">1.05</a>
-    <a class="dropdown-item" href="#106">1.06</a>
-</div>
-</div>
-<div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Unit 2
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#201">2.01</a>
-    <a class="dropdown-item" href="#202">2.02</a>
-    <a class="dropdown-item" href="#203">2.03</a>
-    <a class="dropdown-item" href="#205">2.05</a>
-    <a class="dropdown-item" href="#206">2.06</a>
-    <a class="dropdown-item" href="#208">2.08</a>
-</div>
-</div>
-<div class="btn-group">
-   <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Unit 3
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#301">3.01</a>
-    <a class="dropdown-item" href="#303">3.03</a>
-    <a class="dropdown-item" href="#305">3.05</a>
-    <a class="dropdown-item" href="#205">2.05</a>
-    <a class="dropdown-item" href="#206">2.06</a>
-    <a class="dropdown-item" href="#306">3.06</a>
-</div>
-</div>
 
-		<h2>1.03</h2>
-		</center>	
+	<div class="mathnav">	
+		<div class="row">
+		<h2 class="mathheader">Math</h2>
+		
+	<div class="dropdown">
+  		<button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Unit 1
+  		<span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu">
+    		<li><a href="#103">1.03</a></li>
+    		<li><a href="#105">1.05</a></li>
+    		<li><a href="#106">1.06</a></li>
+  		</ul>
+	</div>
+
+	<div class="dropdown">
+  		<button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Unit 2
+  		<span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu">
+		    <li><a href="#201">2.01</a></li>
+		    <li><a href="#202">2.02</a></li>
+		    <li><a href="#203">2.03</a></li>
+		    <li><a href="#205">2.05</a></li>
+		    <li><a href="#206">2.06</a></li>
+		    <li><a href="#208">2.08</a></li>
+  		</ul>
+	</div>
+
+	<div class="dropdown">
+  		<button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown">Unit 3
+  		<span class="caret"></span>
+  		</button>
+  		<ul class="dropdown-menu">
+		    <li><a href="#301">3.01</a></li>
+    		<li><a href="#303">3.03</a></li>
+    		<li><a href="#305">3.05</a></li>
+    		<li><a href="#205">2.05</a></li>
+    		<li><a href="#206">2.06</a></li>
+    		<li><a href="#306">3.06</a></li>
+  		</ul>
+	</div>
+</div>
+</div>
+	<div class="container">
+	<div class="row mathnotes">
+		<div class="col-lg-6">
+	
+		<h2 id="103">1.03</h2>	
 		<p><strong>Variable</strong> a letter which holds an unknown value <span class="ex">EX</span> m</p>
 		
 		<p><strong>Numerical Expression</strong> a number or a group of numbers that are +, -, *, and /
@@ -118,8 +159,11 @@
 		<p><strong>Substitution</strong> is when a variable is holding a place for an unknown number
 		<span class="ex">EX</span> 2x - y - 3z| x is 4, y is -3, z is -1 | 2(8) - -3 - 3(-1) | =14</p>
 			<hr>
-		
-		<center><h2 id="105">1.05</h2></center>
+	
+	</div>
+
+<div class="col-lg-6">
+		<h2 id="105">1.05</h2>
 		<p><strong>Distributive Property</strong> is the process of multiplying a term to a sum</p>
 		
 		<h3>Distributive Property with Multiplication</h3>
@@ -135,8 +179,10 @@
 		<p><span class="ex">EX</span> 2 -8x/-2, divide everything by -2, so it turns into 4x</p>
 		<p><span class="ex">EX</span> -(6+ y) is the same as -1(6 + y)</p>
 			<hr>
-			
-		<center><h2 id="106">1.06</h2></center>
+			</div>
+
+		<div class="col-lg-6">
+		<h2 id="106">1.06</h2>
 		<h3>Phrases</h3>
 		<p><strong>Addition Terms</strong> sum of, more than, increased by, and total</p>
 		<p><strong>Subtraction Terms</strong> difference of, minus, less than, decreased by, and subtracted from</p>
@@ -150,8 +196,10 @@
 		<p><span class="ex">EX</span> the quantity of n minus 6 cubed is (n-6)3</p>
 		<p><span class="ex">EX</span> one less than 6 is 6-1</p>
 			<hr>
-		
-		<center><h2 id="201">2.01</h2></center>
+		</div>
+
+		<div class="col-lg-6">
+		<h2 id="201">2.01</h2>
 		<h3>Properties</h3>
 		<p><strong>Commutative Property of Addition and Multiplication</strong> numbers can move around and change
 		order, they commute <span class="ex">EX</span> 5+2 can be 2+5</p>
@@ -173,7 +221,12 @@
 		<p><span class="ex">EX</span> 10 = 10 is Reflexive</p>
 		<p><span class="ex">EX</span> 4 * 10 = 10 * 4 is Commutative</p>
 			<hr>
-		<center><h2 id="202">2.02</h2></center>
+
+		</div>
+
+
+		<div class="col-lg-6">
+		<h2 id="202">2.02</h2>
 		<p>With <strong>ALL</strong> equations, the goal is to isolate the variable and determine the solution. 
 		When doing equations with multiple steps, equations are like scales, you have to keep them balanced
 		what you do to one side of an equation you must to do the other</p>
@@ -190,7 +243,11 @@
 		<p><span class="ex">EX</span> 2(x + 4) = 10, distribute the 2, 2x + 8 =10, then minus 8 from both sides,
 		2x = 2, divide by 2 to both sides, to get x =1</p>
 			<hr>
-		<center><h2 id="203">2.03</h2></center>
+
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="203">2.03</h2>
 			<h3>Equations with variables on both side</h3>
 			<p><span class="ex">EX</span> 3x + 3 = 2x+ 5, -3 from both sides, 3x= 2x+ 2, minus 2x from 3x to get
 			x =2
@@ -201,7 +258,10 @@
 			to 6, 2x+ 14 = 3x+12, then minus the 2x from both sides, 14 =x+ 12, then minus the 12 to get 2 =x</p>
 			<p><span class="ex">EX</span> 2x - 6 =2(x-3), distribute, 2x - 6 = 2x -6, minus the 2x, -6 = -6</p>
 			<hr>
-		<center><h2 id="205">2.05</h2></center>
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="205">2.05</h2>
 			<p><span class="ex">EX</span> Twice a number added to seven equals 23 is a guessing game so
 			2n + 7 = 23, n being the number I do not know</p>
 			<p><span class="ex">EX</span> Find a number, when decreased by 18 is 5 times its opposite, so
@@ -211,7 +271,7 @@
 			<p><span class="ex">EX</span> John is eleven times as old as his son Marcus, in 12 years, John will
 			be three times as old as Marcus, what is Marcus's age now? So make a table
 			<table><td>Name</td><td>Age Now</td><td>Age in 12 yrs</td> <tr> <td>Marcus</td><td>x</td><td>x+12</td>
-			<tr> <td>John</td><td>11x</td><td>11x + 12</td></table>John's age in 12 years is 11x+ 12
+			</tr> <td>John</td><td>11x</td><td>11x + 12</td></table>John's age in 12 years is 11x+ 12
 			and three times is 3(x+12) and the dads age in 12 years. So 11x + 12 = 3(x+ 12), then do equation
 			to get x =3. So his age now is 3</p>
 			<p><strong>Consecutive Integers</strong> numbers right beside each other on a number line</p>
@@ -226,7 +286,10 @@
 			like above to get x =42</p>
 			<p><span class="ex">EX</span> </p>
 			<hr>
-		<center><h2 id="206">2.06</h2></center>
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="206">2.06</h2>
 			<p>When multiplying fractions, multiply across then simplify.</p>
 			<p><span class="ex">EX</span> 2/3 * 5/6 = 10/18 then simplified to 5/9</p>
 			<p><span class="ex">EX</span> Reciporical is flipped, so 1/5 to 5/1</p>
@@ -241,7 +304,10 @@
 			<p><span class="ex">EX</span> 1/4n - 4 =0, to 4* 1/4n - 4*4 = 0, to 4/1 * 1/4n -16 = 0, to n=16</p>
 			<hr>	
 			
-		<center><h2 id="301">3.01</h2></center>
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="301">3.01</h2>
 			<p><strong>Venn Diagrams</strong> visual representations of a group of things aka a set</p>
 			<p><strong>Set</strong> a collection of numbers or objects, venn diagrams are used to see the
 			relationship between sets</p>
@@ -258,7 +324,10 @@
 				<p><span class="ex">EX</span> </p>
 			<hr>
 		
-		<center><h2 id="302">3.02</h2></center>
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="302">3.02</h2>
 			<p><strong>Union</strong> in math, a union is everything in two or more sets coming together
 			to make one larger set, if there are 2 sets a and b, it'll be written like AUB</p>
 			<p><strong>Intersection</strong> the intersection of two or more sets represent the items that are the same
@@ -268,7 +337,10 @@
 			the answer is (a,e,i,o,u), it is a subset</p>
 			<hr>
 		
-		<center><h2 id="303">3.03</h2></center>
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="303">3.03</h2>
 			<p><strong>Complements</strong> is something that does not fit with sets and written like 
 			V, or ', so basically the opposite</p>
 			<p><strong>Cross Product</strong> of two sets is written using the x letter, and results in a third set
@@ -277,8 +349,11 @@
 			the first set is 5, and the second is 6 so 5x6, so total of 30 elements </p>
 			<p><span class="ex">EX</span> </p>
 			<hr>
-			
-		<center><h2 id="305">3.05</h2></center>
+		
+
+		</div>
+		<div class="col-lg-6">
+		<h2 id="305">3.05</h2>
 			<p><strong>Relation</strong> simply describes a relationship & pairs input values with output values
 			</p>
 			<p><strong>Domain</strong> of a relation is the possible input values so X</p>
@@ -287,16 +362,17 @@
 			<p><span class="ex">EX</span> </p>
 			<p><span class="ex">EX</span> </p>
 			<hr>
-			
-		<center><h2 id="306">3.06</h2></center>
+		
+		</div>
+		<div class="col-lg-6">
+		<h2 id="306">3.06</h2>
 			<p><strong>Function notation</strong> is used to write the equation of a function, it simply
 			sets an expression. written like f(x) </p>
 			<p><strong></strong></p>
 			<p><span class="ex">EX</span> </p>
-			<hr>
-			
-		
-		
+		</div>	
+	
+</div>
 	</div>
 </body>
 </html>
