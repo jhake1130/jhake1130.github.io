@@ -1,0 +1,68 @@
+body {
+		background: #f2f2f2;
+	}
+	.navbar-toggle {
+		display:block;
+	}
+	.form-control {
+		max-width: 1300px;
+		width:75%;
+		display:inline;
+		margin:10px;
+	}
+	#todos ul {
+		padding-left:0;
+		
+
+	}
+
+	#todos li {
+		background: #fff;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10px;
+		width:90%;
+		list-style-type: none;
+		/*padding:15px;*/
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+	
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	}
+	.btn {
+		float:right;
+		padding:5px 10px;
+		border-radius:50px;
+	}
+	#new {
+		background: none;
+		padding: 7px 11px;
+		border-radius:40px;
+		font-weight:bold
+	}
+	#delete {
+		background:white;
+		border-radius:50px;
+		line-height: 50px
+		padding: 0px;
+		width: 40px;
+		height: 40px;
+		font-weight:bold;
+	}
+	.navbar-default {
+		/*background: #fcfdff;*/
+	}
+	.cals {
+		float:right;
+		border-left:1px solid lightblue;
+		padding:20px;
+		height:60px;
+	}
+	.itemn {
+		float:left;
+		
+		padding:20px;
+		height:60px;
+
+	}
