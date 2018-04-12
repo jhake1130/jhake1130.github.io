@@ -37,6 +37,7 @@ body {
 	}
 
 	#new {
+		margin-top:10px;
 		background: none;
 		padding:0;
 		padding-top: 4px;
@@ -51,6 +52,7 @@ body {
 		height:30px;
 	}
 	#delete2 {
+		margin-top:10px;
 		background: none;
 		padding:0;
 		padding-top: 4px;
