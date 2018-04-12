@@ -35,9 +35,7 @@ body {
 		padding:5px 10px;
 		border-radius:50px;
 	}
-.bg-primary {
-		background:#343a40;
-	}
+
 	#new {
 		background: none;
 		padding:0;
@@ -76,7 +74,7 @@ body {
 		font-weight:bold;
 	}
 	.navbar-default {
-		/*background: #fcfdff;*/
+		background:#343a40;
 	}
 	.cals {
 		float:right;
