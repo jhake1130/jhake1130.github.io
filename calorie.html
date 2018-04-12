@@ -3,24 +3,28 @@
 <head>
 	<title>Calorie Counter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="shortcut icon" type="image/png" href="/ic_note_add_3x.png"/>
+	
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="calories.css">
 </head>
 	<body>
 	<nav class="navbar navbar-default">
-      		<input type="text" id="addvalue" class="form-control" placeholder="food, calories"></input>
-    		<button type="button" class="navbar-toggle collapsed" onclick="newFood()" id="new">
+      		<input type="text" id="foodValue" class="form-control" placeholder="food, calories"></input>
+    		<button type="button" class="navbar-toggle collapsed" id="new">
 			        <span>+</span>
+			</button>
+			<button type="button" class="navbar-toggle collapsed" id="delete2">
+			        <span>-</span>
 			</button>
 	</nav>
 
 	<div id="todos">
 		<h2 style="text-align: center" id="cl"></h2>
 		<ul id="ultodos"></ul>
-		
 	</div>
-	
+
 	<script src="main.js"></script>
 </body>
 </html>
