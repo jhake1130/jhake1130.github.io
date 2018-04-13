@@ -4,9 +4,13 @@ body {
 	.navbar-toggle {
 		display:block;
 	}
+	.navbar-brand {
+		padding-right:10px;
+		font-family:Raleway;
+	}
 	.form-control {
 		    	max-width: 1300px;
-    			width: 70%;
+    			width: 60%;
     			display: inline;
     			margin: 10px;
     			background: none;
