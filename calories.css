@@ -6,9 +6,18 @@ body {
 	}
 	.form-control {
 		max-width: 1300px;
-		width:65%;
+		width:70%;
 		display:inline;
 		margin:10px;
+		background: rgba(255,255,255,.2);
+		border:0px;
+	}
+	.form-control:focus {
+  		color: white;
+  		background-color: rgba(255,255,255,.2);
+  		border:none;
+  		outline: 0;
+  		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 	}
 	#todos ul {
 		padding-left:0;
@@ -35,9 +44,8 @@ body {
 		padding:5px 10px;
 		border-radius:50px;
 	}
-
 	#new {
-		margin-top:10px;
+		margin-top:11px;
 		background: none;
 		padding:0;
 		padding-top: 4px;
@@ -47,22 +55,22 @@ body {
 		color: #007bff;
 		background-color: transparent;
 		background-image: none;
-		border-color: #007bff;
+		border-color: none;
 		width:30px;
 		height:30px;
 	}
 	#delete2 {
-		margin-top:10px;
+		margin-top:11px;
 		background: none;
 		padding:0;
 		padding-top: 4px;
 		padding-bottom: 13px;
 		border-radius:50px;
 		font-weight:bold;
-		color: red;
+		color: white;
 		background-color: transparent;
 		background-image: none;
-		border-color: red;
+		border-color: none;
 		width:30px;
 		height:30px;
 	}
@@ -76,6 +84,9 @@ body {
 		font-weight:bold;
 	}
 	.navbar-default {
+		/*background: #fcfdff;*/
+	}
+	.bg-primary {
 		background:#24292e;
 	}
 	.cals {
@@ -100,4 +111,12 @@ body {
 		background-color: transparent;
 		background-image: none;
 		border-color: red;
+	}
+	.btn-outline-database {
+		margin-right:10px;
+		margin-top:12px;
+		color: green;
+		background-color: transparent;
+		background-image: none;
+		border-color: green;
 	}
