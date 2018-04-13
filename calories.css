@@ -16,7 +16,7 @@ body {
 	}
 	.form-control:focus {
   		color: black;
-  		background-color: rgba(255,255,255,1);
+  		background-color: rgba(255,255,255,.2);
   		border:none;
   		outline: 0;
   		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
