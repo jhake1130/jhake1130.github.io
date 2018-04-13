@@ -95,6 +95,9 @@ body {
 	.navbar-default {
 		/*background: #fcfdff;*/
 	}
+	.navbar {
+		border-radius: 0;
+	}
 	.bg-primary {
 		background:#24292e;
 	}
