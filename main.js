@@ -1,6 +1,7 @@
 var foods =(localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')): {
 	name: [],
 	calories: [],
+	database: [],
 	totalc: 0
 };
 var limit = 1500;
@@ -29,17 +30,16 @@ function renderTodoList() {
 		var calsleft = document.createTextNode(foods.totalc + " Calories")
 
 		lh2.appendChild(calsleft)
-		if(foods.calories.value !== undefined) {
-			var howmany = foods.calories.reduce(function(total, num) {
+			// var howmany = foods.calories.reduce(function(total, num) {
 
 
-				console.log(total + "total")
-				console.log(num + "num")
-			foods.totalc = total + num
-			console.log(foods.totalc + "totalc")
-			return total + num;
-			})
-		}
+			// 	console.log(total + "total")
+			// 	console.log(num + "num")
+			// foods.totalc = total + num
+			// console.log(foods.totalc + "totalc")
+			// return total + num;
+			// })
+		
 	// for(var i =0; i < todos.length; i++) {
 	// 	var list = document.createElement("li");
 	// 	var note = document.createTextNode(todos[i]);      
@@ -85,10 +85,14 @@ document.getElementById('new').addEventListener('click', function() {
 			var howmany = foods.calories.reduce(function(total, num) {
 				console.log(total + "total")
 				console.log(num + "num")
-			foods.totalc = total + num
-			console.log(foods.totalc + "totalc")
-			return total + num;
+				foods.totalc = total + num
+				console.log(foods.totalc + "totalc")
+				return total + num;
 			})
+
+			if(totalc > 1500) {
+				document.getElementById("c1")
+			}
 			addItemToDOM(fname,cals);
 			
 			array.length= 0;
@@ -109,13 +113,20 @@ document.getElementById('new').addEventListener('click', function() {
 			var buttons = document.createElement('div');
   			buttons.classList.add('buttons');
 			var remove = document.createElement('button');
+			var database = document.createElement('button')
+			database.classList.add('database')
+			database.classList.add("btn")
+			database.classList.add("btn-outline-database")
+			// database.addEventListener('click', dataItem);
+			database.innerText = "M";
+
   			remove.classList.add('remove');
   			remove.classList.add("btn")
   			remove.classList.add("btn-outline-primarymade")
   			remove.addEventListener('click', removeItem);
   			remove.innerText = "X";
   			buttons.appendChild(remove);
-
+  			buttons.appendChild(database);
 			var foodCals = document.createTextNode(cals);
 			var foodName = document.createTextNode(food);
 			item.appendChild(foodName); 
@@ -129,6 +140,26 @@ document.getElementById('new').addEventListener('click', function() {
 			
 		}
 
+		// function dataItem() {
+		// 	var item = this.parentNode.parentNode;
+  // 			var parent = item.parentNode;
+  // 			var id = parent.class;
+  // 			var value = item.innerText;
+
+
+  // 			if (id === 'tolist') {
+  //   			foods.name.splice(foods.name.indexOf(value), 1);
+  //   			foods.database.push(value);
+  // 			} else {
+  //   			foods.database.splice(foods.database.indexOf(value), 1);
+  //   			foods.name.push(value);
+  // 			}
+  // 			dataObjectUpdated();
+  // 			var target = (id === 'tolist') ? document.getElementById('completed'):document.getElementById('todo');
+
+ 
+  // target.insertBefore(item, target.childNodes[0]);
+		// }
 		function removeItem() {
 			
 			var item = this.parentNode.parentNode;
@@ -136,30 +167,19 @@ document.getElementById('new').addEventListener('click', function() {
   			var id = parent.id;
   			var value = item.innerText;
 
-  
-
     		foods.name.splice(foods.name.indexOf(value), 1);
   			var remove = foods.calories.splice(foods.calories.indexOf(value), 1);
+  			
+
   			console.log(value + id + item)
-  			foods.totalc = 0;
   			parent.removeChild(item);
+  			if(foods.name.length <= 0) {
+  				foods.totalc = 0;
+
+  			}
   			dataObjectUpdated();
 		}
 
-		function sortTodo() {
-
-			var notes = document.getElementsByTagName("li");
-			for (var i = 0; i < notes.length; i++) {
-				notes[i].style.display = "none";
-			}
-			for (var i = 0; i < todos.length; i++) {
-			todos.sort()
-			var para = document.createElement("li");
-			var t = document.createTextNode(todos[i]);      
-			para.appendChild(t);                                          
-			document.getElementById("todos").appendChild(para); 
-		}
-		}
 		document.getElementById('delete2').addEventListener('click', function() {
 		var btnshow = document.getElementsByClassName("buttons");
    			for (var i = 0; i < btnshow.length; i++) {
