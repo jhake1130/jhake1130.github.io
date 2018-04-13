@@ -90,9 +90,6 @@ document.getElementById('new').addEventListener('click', function() {
 				return total + num;
 			})
 
-			if(totalc > 1500) {
-				document.getElementById("c1")
-			}
 			addItemToDOM(fname,cals);
 			
 			array.length= 0;
