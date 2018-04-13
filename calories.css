@@ -28,8 +28,10 @@ body {
 	}
 	#todos ul {
 		padding-left:0;
-		
-
+	}
+	#ultodos:empty:before {
+   		content: 'Come on, add some Food!';
+   		padding:100px;
 	}
 
 	#todos li {
