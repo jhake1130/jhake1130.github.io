@@ -68,7 +68,8 @@ function dataObjectUpdated() {
 			foods.calories.push(Number(calories));
 			var fname = array[0];
 			var cals = array[1];
-
+			
+			foods.totalc= cals;
 			var howmany = foods.calories.reduce(function(total, num) {
 				console.log(total + "total")
 				console.log(num + "num")
