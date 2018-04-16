@@ -27,7 +27,7 @@ body {
 
 	#ultodos:empty:before {
    		content: 'Come on, add some Food!';
-   		padding:100px;
+   		margin: 12%;
 }
 .navbar {
     border-radius: 0px;
