@@ -2,10 +2,6 @@
 <html>
 <head>
 	<title>Calorie Counter</title>
-<link rel="apple-touch-startup-image" href="f-s-md.png">
-<link rel="apple-touch-icon" href="f-s-md.png"
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#24292e">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -22,11 +18,47 @@
 			        <span><i class="fas fa-minus"></i></span>
 			</button>
 	</nav>
+	<div id="calorieheader">
+		<h3>Calories</h3>
+		<p class="limit"></p>
+	</div>
+	<div class="container">
+	<div class="row">
 
 	<div id="todos">
-		<h2 style="text-align: center" id="cl"></h2>
+		<!-- <div class="col-md-6">
+
+		</div> -->
+		<div class="col-md-6">
 		<ul id="ultodos"></ul>
-	</div>
+		</div>
+
+		<div class="col-lg-6, col-md-6">
+		<div id="rightside">
+			<h2>Your Calorie Information</h2>
+			<hr>
+			<div class="calinfo">
+			<table class="mytable">
+			<tr>
+			<td><h3>Calorie Limit</h3></td>
+			<td><p>1500</p></td>
+			</tr>
+			<tr>
+			<td><h3>Calories In</h3></td>
+			<td><p>615</p></td>
+		</tr>
+		<tr>
+			<td><h3>Calories Left</h3></td>
+			<td><p>885</p></td>
+		</table>
+			</div>
+		</div>
+		
+
+</div>
+</div>
+</div>
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	<script src="main.js"></script>
 </body>

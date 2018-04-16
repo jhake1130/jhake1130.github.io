@@ -4,23 +4,17 @@ body {
 	.navbar-toggle {
 		display:block;
 	}
-	.navbar-brand {
-		padding-right:10px;
-		font-family:Raleway;
-	}
+
 	.form-control {
-		    	max-width: 1300px;
-    			width: 55%;
-    			display: inline;
-    			margin: 10px;
-    			background: none;
-    			border: .5px solid rgba(255,255,255,.1);
-    			border-radius: 50px;
-			margin-right:5px;
-    /* border: 0px; */
+		max-width: 1300px;
+		width:60%;
+		display:inline;
+		margin:10px;
+		background: rgba(255,255,255,.2);
+		border:0px;
 	}
 	.form-control:focus {
-  		color: black;
+  		color: white;
   		background-color: rgba(255,255,255,.2);
   		border:none;
   		outline: 0;
@@ -29,17 +23,20 @@ body {
 	#todos ul {
 		padding-left:0;
 	}
+
 	#ultodos:empty:before {
    		content: 'Come on, add some Food!';
    		padding:100px;
-	}
-
+}
+.navbar {
+    border-radius: 0px;
+}
 	#todos li {
 		background: #fff;
 		margin-left:auto;
 		margin-right:auto;
 		margin-bottom: 10px;
-		width:90%;
+		width:95%;
 		list-style-type: none;
 		/*padding:15px;*/
 		text-decoration:none;
@@ -95,10 +92,9 @@ body {
 	.navbar-default {
 		/*background: #fcfdff;*/
 	}
-	.navbar {
-		border-radius: 0;
-	}
 	.bg-primary {
+		/*delete margin if i dont keep header*/
+		margin-bottom:0; 
 		background:#24292e;
 	}
 	.cals {
@@ -132,3 +128,79 @@ body {
 		background-image: none;
 		border-color: green;
 	}
+
+	#rightside {
+		background: #fff;
+		margin-left:auto;
+		margin-right:auto;
+		
+		width:95%;
+		list-style-type: none;
+		padding:0px 15px;
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+	
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	}
+
+	#rightside h2 {
+		text-align:center;
+		margin-top:15px;
+	}
+
+	hr {
+		width:90%;
+		margin-top:0;
+		border-top: lightblue 1px solid;
+	}
+	.calinfo h3 {
+		
+		
+	}
+	.mytable {
+		width:100%;
+	}
+	.calinfo p {
+		float:right;
+	}
+	#calorieheader {
+		background: #fff;
+		margin-bottom:10px;
+		width:100%;
+		list-style-type: none;
+		padding:0px 15px;
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+	
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	}
+	#calorieheader h3 {
+		margin-top:15px;
+		margin-right:5px;
+		display:inline-block;
+	}
+	#calorieheader p {
+		margin-top:17px;
+		display:inline;
+		float:right;
+		font-size:20px;
+	}
+
+/*	.tolist {
+  animation-duration: .7s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}*/
