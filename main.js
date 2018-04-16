@@ -44,10 +44,10 @@ function dataObjectUpdated() {
 
     addItemToDOM(foodname,foodcals);
   }
-  if(foods.name.length ==0) {
-  				var x = document.getElementById("rightside");
-  				x.style.display = "none";  
-  			}
+  // if(foods.name.length ==0) {
+  // 				var x = document.getElementById("rightside");
+  // 				x.style.display = "none";  
+  // 			}
 
 
 	}
@@ -159,10 +159,10 @@ function dataObjectUpdated() {
   				foods.totalc = 0;
 
   			}
-  			if(foods.name.length <=0) {
-  				var x = document.getElementById("rightside");
-  				x.style.display = "none";  
-  			}
+  			// if(foods.name.length <=0) {
+  			// 	var x = document.getElementById("rightside");
+  			// 	x.style.display = "none";  
+  			// }
   			// renderList();
   			
   			dataObjectUpdated();
@@ -183,6 +183,8 @@ document.getElementById('new').addEventListener('click', function() {
 
 
 function renderCalHeader() {
+
+	if(foods.totalc >= 0) {
 	var mab = document.getElementsByClassName("limit");
    			for (var i = 0; i < mab.length; i++) {
       		mab[i].style.display = "none"; }   
@@ -194,4 +196,5 @@ function renderCalHeader() {
 			limit.appendChild(leemet)
 			document.getElementById("calorieheader").appendChild(limit)
 
+}
 }
