@@ -1,49 +1,28 @@
-var foods =(localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')): {
-	name: [],
-	calories: [],
+var foods =(localStorage.getItem('todoLista')) ? JSON.parse(localStorage.getItem('todoLista')): {
+	food: [],
 	totalc: 0
 };
 var limit = 1500;
 
-function dataObjectUpdated() {
-  localStorage.setItem('todoList', JSON.stringify(foods));
-  console.log(foods)
-}
+	function dataObjectUpdated() {
+  		localStorage.setItem('todoLista', JSON.stringify(foods));
+  		console.log(foods.food)
+	}
 
-
-
-		renderList();
+	renderList();
 		
 
 	function renderList() {
-		if(foods.calories.length !==0) {
-		var howmany = foods.calories.reduce(function(total, num) {
+		if(foods.food.length !==0) {
 
-
-			// console.log(total + "total") // debugging
-			// console.log(num + "num")  // debugging
-			foods.totalc = total + num
-			// console.log(foods.totalc + "totalc")  // debugging
-			return total + num;
-			})
-	}
 		renderCalHeader();
 
-	
-	for(var i =0; i < todos.length; i++) {
-		var list = document.createElement("li");
-		var note = document.createTextNode(todos[i]);      
-		list.appendChild(note);                                          
-		document.getElementById("todos").appendChild(list);
-	}
+		for (var i = 0; i < foods.food.length; i++) {
 
-	for (var i = 0; i < foods.calories.length; i++) {
-
-    var foodname = foods.name[i];
-    var foodcals = foods.calories[i];
-
-    addItemToDOM(foodname,foodcals);
-  }
+    		var foodname = foods.food[i].name;
+    		var foodcals = foods.food[i].calories;
+			addItemToDOM(foodname,foodcals);
+  		}
   // if(foods.name.length ==0) {
   // 				var x = document.getElementById("rightside");
   // 				x.style.display = "none";  
@@ -53,122 +32,118 @@ function dataObjectUpdated() {
 	}
 
 
-		function newFood(food) {
-			
-			if(food.indexOf(',') >-1) {
-				var array = food.split (",")
-				var name = array[0];
-				var calories = array[1]
-			}
-			else {
+// add food
+
+	function newFood(foodz) {
+		if(foodz.indexOf(',') >-1) {
+				var array = foodz.split (",")
+				var foodname = array[0];
+				var foodcalories = Number(array[1])
+		}
+		else {
 				alert("Separate food name and calories with a comma")
 				return false;
-			}
-			foods.name.push(name);
-			foods.calories.push(Number(calories));
-			var fname = array[0];
-			var cals = array[1];
-			
-			foods.totalc= cals;
-			var howmany = foods.calories.reduce(function(total, num) {
-				console.log(total + "total")
-				console.log(num + "num")
-				foods.totalc = total + num
-				console.log(foods.totalc + "totalc")
-				return total + num;
-			})
+		}
 
-			renderCalHeader();
-
-			addItemToDOM(fname,cals);
-			
-			array.length= 0;
-			document.getElementById("foodValue").value=''; //returns add input blank
-			dataObjectUpdated();
+		foods.food.push({name:foodname, calories: foodcalories});
+		foods.totalc = foods.totalc + foodcalories;
+		
+		renderCalHeader();
+		addItemToDOM(foodname,foodcalories);
+		array.length= 0;
+		document.getElementById("foodValue").value=''; //returns add input blank
+		dataObjectUpdated();
 
 		}
 
-		function addItemToDOM(food,cals) {
+//add food to page
+
+	function addItemToDOM(food,cals) {
 			
-			var list = document.createElement("li"); 
-			list.className = "tolist";
-			var item = document.createElement("div"); 
-			item.className = "itemn"
-			var counter =document.createElement("div")
-			counter.className= "cals"
+		var list = document.createElement("li"); 
+		list.className = "tolist";
+		var item = document.createElement("div"); 
+		item.className = "itemn"
+		var counter =document.createElement("div")
+		counter.className= "cals"
 
 
-			var buttons = document.createElement('div');
-  			buttons.classList.add('buttons');
-			var remove = document.createElement('button');
+		var buttons = document.createElement('div');
+  		buttons.classList.add('buttons');
+		var remove = document.createElement('button');
 
-  			remove.classList.add('remove');
-  			remove.classList.add("btn")
-  			remove.classList.add("btn-outline-primarymade")
-  			remove.addEventListener('click', removeItem);
-  			remove.innerText = "X";
-  			buttons.appendChild(remove);
+  		remove.classList.add('remove');
+  		remove.classList.add("btn")
+  		remove.classList.add("btn-outline-primarymade")
+  		remove.addEventListener('click', removeItem);
+  		remove.innerText = "X";
+  		buttons.appendChild(remove);
 
-			var foodCals = document.createTextNode(cals);
-			var foodName = document.createTextNode(food);
-			item.appendChild(foodName); 
-			counter.appendChild(foodCals);
-			list.appendChild(item);  
-			list.appendChild(counter)
-		    list.appendChild(buttons);
+		var foodCals = document.createTextNode(cals);
+		var foodName = document.createTextNode(food);
+		item.appendChild(foodName); 
+		counter.appendChild(foodCals);
+		list.appendChild(item);  
+		list.appendChild(counter)
+		list.appendChild(buttons);
 
-		    
-			document.getElementById("ultodos").appendChild(list);  
+		document.getElementById("ultodos").appendChild(list);  
 			
 		}
-//
 
-		function removeItem() {
-			var maybethis = this;
-			var item = this.parentNode.parentNode;
+//remove food
+
+	function removeItem() {
+		var maybethis = this;
+		var item = this.parentNode.parentNode;
 			var idk = this.parentNode;
 
-  			var parent = item.parentNode;
-  			var id = parent.id;
+		var idk2 = this.parentNode.previousElementSibling;
+		var idk5 = idk2.previousElementSibling;
+		var calname = idk5.innerText;
+		var calnum =	idk2.innerText;
+			// var idk4 =	calnum.innerText;
+  		var parent = item.parentNode;
+  		var id = parent.id;
   			
-  			var value = item.innerText;
+  		var value = item.innerText;
 
 
 
-  			var getcals = value.replace(/[^0-9]/g,'');
+  		var getcals = value.replace(/[^0-9]/g,'');
+  		console.log(getcals + " getcals")
   			foods.totalc = foods.totalc - getcals;
+		console.log(foods.totalc + " foods.totalc")
+  		console.log(idk2 + "idk2")
+  		console.log(calnum + "calnum")
+  		console.log(calname + " calname")
+  		console.log(maybethis + "maybethis")
+  		console.log(item + "item")
+  		console.log(idk + "idk")
+  		console.log(parent + "parent")
+  		console.log(id + "id")
+  		console.log(value + "value")
 
-  			console.log(maybethis + "maybethis")
-  			console.log(item + "item")
-  			console.log(idk + "idk")
-  			console.log(parent + "parent")
-  			console.log(id + "id")
-  			console.log(value + "value")
+  	for (var i=0; i < foods.food.length; i++) {
+  		if(foods.food[i].name == calname && foods.food[i].calories == calnum) {
+  			console.log("NAHOMENOY")
+  			foods.food.splice(i,1)
+  		}
+  	} 
+   
+	// For replacing the header with current calorie count
 
-
-    		foods.name.splice(foods.name.indexOf(value), 1);
-			foods.calories.splice(foods.calories.indexOf(value), 1);
-
-			// 
-			// For replacing the header with current calorie count
 			renderCalHeader();
   			// 
   			
 
   			parent.removeChild(item);
-  			if(foods.name.length <= 0) {
-  				foods.totalc = 0;
-
-  			}
-  			// if(foods.name.length <=0) {
-  			// 	var x = document.getElementById("rightside");
-  			// 	x.style.display = "none";  
-  			// }
-  			// renderList();
+  		
   			
   			dataObjectUpdated();
 		}
 
+//listen for clicks
 document.getElementById('new').addEventListener('click', function() {
   var value = document.getElementById('foodValue').value;
   if (value) {
@@ -183,9 +158,10 @@ document.getElementById('new').addEventListener('click', function() {
  		})
 
 
+//render the calorie header
 function renderCalHeader() {
 
-	if(foods.totalc >= 0) {
+	// if(foods.totalc >= 0) {
 	var mab = document.getElementsByClassName("limit");
    			for (var i = 0; i < mab.length; i++) {
       		mab[i].style.display = "none"; }   
@@ -197,5 +173,5 @@ function renderCalHeader() {
 			limit.appendChild(leemet)
 			document.getElementById("calorieheader").appendChild(limit)
 
-}
-}
+	// }
+} }
