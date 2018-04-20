@@ -34,17 +34,18 @@
 	}
 
 	p {
-		display:inline-block;
-		float:right;
-		text-align: center;
+		display:inline;
+		
 		font-size:50px;
-		padding-right:75px;
-		margin: 0 0 0 0px;
+		padding:30px;
+		margin: 0 auto;
 	}
 
 	.controls {
-		float:right;
-		display:inline;
+		/*float:right;
+		display:inline;*/
+		text-align:center;
+		display:block;
 		margin-top:75px;
 	}
 
@@ -68,8 +69,8 @@
 	}
 @media screen and (max-width:376px ) {
   .controls {
-		float:right;
-		display:inline;
+		
+		
 		margin-top:0;
 	}
 
@@ -81,12 +82,15 @@
 	<div class="container">
 		<h1>How Many Halo Tops Are Left?</h1>
 	<div class="container">
+		<div class="foodimage">
 		<center>
 		<img src="https://static1.squarespace.com/static/555e46ffe4b00d375ca9fd13/t/5a8b5891f9619a0752add7ef/1523480960216/">
 		</center>
+		</div>
+
 		<div class="controls">
-			<p class="minusIce">-</p>
 			<p class="addIce">+</p>
+			<p class="minusIce">-</p>
 		</div>
 	</div>
 	<div class="amount"></div>
