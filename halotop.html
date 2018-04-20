@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!-- i took out user scalable -->
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
+	<title>How Many Halo Tops Are Left?</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style type="text/css">
+	h2 {
+		margin:0;
+	}
+
+	header {
+		height:20px;
+		background: #AF8A17;
+	}
+
+	h1 {
+		text-align:center;
+		margin-top:10px;
+	}
+
+	img {
+		height:250px;
+		padding-left:10px;
+    	width: 250px;
+	}
+
+	p {
+		display:inline-block;
+		float:right;
+		text-align: center;
+		font-size:50px;
+		padding-right:75px;
+		margin: 0 0 0 0px;
+	}
+
+	.controls {
+		float:right;
+		display:inline;
+		margin-top:75px;
+	}
+
+	.gold {
+		color:#AF8A17;
+	}
+	.amount {
+		display:block;
+	}
+
+	.amount img {
+		width:50px;
+		height:50px;
+	}
+
+	.woah {
+		background: pink;
+	}
+	.overFive {
+		transform:rotate(180deg);
+	}
+@media screen and (max-width:370px ) {
+  .controls {
+		float:right;
+		display:inline;
+		margin-top:0;
+	}
+
+}
+</style>
+</head>
+<body>
+	<header></header>
+	<div class="container">
+		<h1>How Many Halo Tops Are Left?</h1>
+	<div class="container">
+		<center>
+		<img src="https://static1.squarespace.com/static/555e46ffe4b00d375ca9fd13/t/5a8b5891f9619a0752add7ef/1523480960216/">
+		</center>
+		<div class="controls">
+			<p class="minusIce">-</p>
+			<p class="addIce">+</p>
+		</div>
+	</div>
+	<div class="amount"></div>
+	</div>
+	
+
+<script>
+
+	//add ice cream
+	var howmany = document.querySelectorAll(".amount img").length;
+	console.log(howmany)
+	var addIceCream = document.querySelector(".addIce")
+	addIceCream.addEventListener("click", function() {
+	var x = document.createElement("IMG");
+    x.setAttribute("src", "https://static1.squarespace.com/static/555e46ffe4b00d375ca9fd13/t/5a8b5891f9619a0752add7ef/1523480960216/");
+    var where = document.querySelector(".amount");
+    (where).appendChild(x)
+    howmany++
+	if (howmany > 0) {
+ 		var z = document.querySelector("img");
+ 		z.setAttribute("src", "https://static1.squarespace.com/static/555e46ffe4b00d375ca9fd13/t/5a8b5891f9619a0752add7ef/1523480960216/")
+ 		console.log("h")
+ 	}
+
+ 	if (howmany>=5 && howmany <=9) {
+ 		var foo = document.body;
+ 		var overFive = document.querySelectorAll(".amount img")
+ 		for(var i=4; i < overFive.length; i++) {
+ 			overFive[i].classList.add("overFive")
+ 		}
+ 		foo.style.background ="pink"
+		console.log("herer")
+	};
+
+ 	if(howmany >10) {
+ 		window.open('https://www.homeremediesandcooltips.com/lower-blood-sugar-levels/');
+ 	}
+	})
+
+addIceCream.addEventListener("mouseover", function() {
+	this.classList.add("gold")
+});
+	addIceCream.addEventListener("mouseout", function() {
+	this.classList.remove("gold")
+});
+
+
+	//remove ice cream
+	 var removeIceCream = document.querySelector(".minusIce")
+	 removeIceCream.addEventListener("click", function() {
+	 	this.classList.toggle("gold");
+	 if (howmany !== 0) {
+	 	var x = document.querySelector(".amount IMG");
+     	var where = document.querySelector(".amount");
+     	where.removeChild(x)
+     	howmany--
+ 	} 
+
+ 	if (howmany ===0) {
+ 		var y = document.querySelector("img");
+ 		y.setAttribute("src", "https://cheapteacupmaltesepuppies.com/assets/images/maltese-dog-xs-447x447.png")
+ 	}
+	})
+removeIceCream.addEventListener("mouseover", function() {
+	this.classList.add("gold")
+});
+	removeIceCream.addEventListener("mouseout", function() {
+	this.classList.remove("gold")
+});
+
+</script>
+</body>
+</html>
