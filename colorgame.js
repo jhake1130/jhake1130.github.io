@@ -5,10 +5,14 @@ var squares = document.querySelectorAll(".square");
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay= document.getElementById("message");
 var h1 = document.querySelector("h1");
+var stripe = document.querySelector("#stripe")
 var resetButton = document.querySelector("#reset")
 var modeButtons = document.querySelectorAll(".mode")
 var audio = document.querySelector("#myAudio")
-
+var round= 1;
+var scoreSpan = document.getElementById("score");
+var score = 0;
+var win = document.querySelector("#win");
 init();
 
 function init() {
@@ -16,6 +20,7 @@ function init() {
 	setupModeButtons();
 	setupSquaresListeners();
 	reset()
+	h1.textContent="Round " + round
 }
 
 function setupModeButtons() {
@@ -25,9 +30,11 @@ function setupModeButtons() {
 			modeButtons[1].classList.remove("selected");
 			this.classList.add("selected");//this refers to what was clicked on
 			this.textContent ==="Easy" ? numSquares =3: numSquares =6; //if easy then num is 3 otherwise is 6
+			console.log(numSquares)
 			//change if medium modes
-			reset() // if u click it it resets the screen to 3 squares
+			if(round <5) {reset(); console.log("h")} // if u click it it resets the screen to 3
 		});
+	
 	}
 }
 
@@ -39,28 +46,38 @@ function setupSquaresListeners() {
 		var clickedColor = this.style.background
 		//compare color to pickedColor
 		if(clickedColor === pickedColor) {
-			resetButton.textContent="Play Again?"
-			messageDisplay.textContent="Correct!"
-			changeColors(clickedColor)
-			h1.style.background=clickedColor;
+			// resetButton.textContent="Play Again?"
+			messageDisplay.textContent=pickedColor
+			if(numSquares >= 6) {
+			changeColors(clickedColor,numSquares)
 			youWin()
-			audio.setAttribute("src", "beatit.mp3")
+			}
+			
 		} else {
-			this.style.background= "#232323";
-			messageDisplay.textContent="Try Again Faggot"
+			
+			this.style.background= "none";
+			// messageDisplay.textContent="Try Again Faggot"
 			}
 		})
 	}
 }
 
 function reset() {
+	if(round===5) {
+		round = 1;
+		score = 0;
+		colorDisplay.textContent=pickedColor;
+	}
+	document.body.classList.remove("mich")
 	colors = generateRandomColors(numSquares);
+	win.textContent="";
 	//pick a new random color from array
 	pickedColor = pickColor();
 	//change colorDisplay to match picked color
+	h1.style.display="block"
 	colorDisplay.textContent = pickedColor
 	resetButton.textContent = "New Colors"
-	messageDisplay.textContent="";
+	messageDisplay.textContent=pickedColor;
 	//change colors of square
 	for(var i=0; i < squares.length; i++) {
 		if(colors[i]) {
@@ -70,7 +87,12 @@ function reset() {
 		squares[i].style.display="none"
 	}
   }
+  if(round ===1) {
 	h1.style.background ="linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)"
+}
+
+	 if(round ===4) { h1.style.background ="red";}
+	scoreSpan.textContent=score;
 }
 
 //reset
@@ -78,14 +100,30 @@ resetButton.addEventListener("click", function() {
 	reset()
 })
 
-function changeColors(color) {
+function changeColors(color,mode) {
 	//loop through all squares
-	for(var i=0; i < squares.length; i++) {
+	if(mode === 3) {
 	//change each color to match given color
-		// squares[i].style.background=color
-		squares[i].style.background=""
-		squares[i].classList.add("michael")
+	for(var i=0; i < squares.length; i++) {
+		squares[i].style.background=color
+		colorDisplay.textContent="YOU WIN"
+		}
 	}
+	
+	if(mode >=6) {
+		for(var i=0; i < squares.length; i++) {
+			squares[i].style.display="none"
+		// squares[i].classList.add("michael")
+	}
+
+	if (round !==5) {
+	stripe.style.background=color;
+	}
+	if(round  >=3 && round !== 4) {
+		stripe.style.background="red";
+	}
+	}
+
 }
 
 function pickColor() {
@@ -119,9 +157,41 @@ function randomColor(){
 }
 
 function youWin(){
+	round++
+	score+=100;
+	h1.style.background =pickedColor;
+	if(numSquares < 9){
+	numSquares+=3
+	}
+	scoreSpan.textContent=score;
+	if(round==2) {
+	audio.setAttribute("src", "beatit.mp3")
+	}
+	if(round ===5) {
+		audio.setAttribute("src", "thriller.mp3")
+	}
+	win.textContent="YOU WIN!";
+	if(round >=3) {
+		win.textContent="HOLY SHIT"
+	}
+	if(round >=4 && round %2==0) {
+		win.textContent="MOTHER FUCKER"
+	}
+	if(round ===5) {
+		setupModeButtons();
+		win.textContent="NO MORE BITCH"
+	}
+	if(round ===4) { h1.style.background ="red";}
+	h1.textContent="Round " + round
+	document.body.classList.add("mich")
 	setInterval(function(){
 	var colors = generateRandomColors(1)
-
-	document.body.style.background=colors
+	// document.body.style.background=colors
+	if(round === 5) {
+	h1.style.background=colors;
+	win.style.color=colors;
+	stripe.style.color=colors;
+	}
 	}, 100);
 }
+
