@@ -13,9 +13,10 @@ var limit = 1500;
 		
 
 	function renderList() {
-		if(foods.food.length !==0) {
+		if(foods.food.length >=0) {
 
 		renderCalHeader();
+		renderCalInfo();
 
 		for (var i = 0; i < foods.food.length; i++) {
 
@@ -23,10 +24,6 @@ var limit = 1500;
     		var foodcals = foods.food[i].calories;
 			addItemToDOM(foodname,foodcals);
   		}
-  // if(foods.name.length ==0) {
-  // 				var x = document.getElementById("rightside");
-  // 				x.style.display = "none";  
-  // 			}
 
 
 	}
@@ -49,6 +46,7 @@ var limit = 1500;
 		foods.totalc = foods.totalc + foodcalories;
 		
 		renderCalHeader();
+		renderCalInfo();
 		addItemToDOM(foodname,foodcalories);
 		array.length= 0;
 		document.getElementById("foodValue").value=''; //returns add input blank
@@ -134,6 +132,7 @@ var limit = 1500;
 	// For replacing the header with current calorie count
 
 			renderCalHeader();
+			renderCalInfo();
   			// 
   			
 
@@ -143,26 +142,42 @@ var limit = 1500;
   			dataObjectUpdated();
 		}
 
+
 //listen for clicks
 document.getElementById('new').addEventListener('click', function() {
   var value = document.getElementById('foodValue').value;
-  if (value) {
-    newFood(value);
-  }
+  		if (value) {
+    		newFood(value);
+  		}
 });
-		document.getElementById('delete2').addEventListener('click', function() {
-		var btnshow = document.getElementsByClassName("buttons");
-   			for (var i = 0; i < btnshow.length; i++) {
-      		btnshow[i].style.display = "block";    
+
+document.getElementById('delete2').addEventListener('click', function() {
+   var btnshow = document.getElementsByClassName("buttons");
+   		for (var i = 0; i < btnshow.length; i++) {
+      		btnshow[i].classList.toggle("btnshow")  // turns x on buttons on or off
     	}
- 		})
+ })
+
+document.getElementById('toggleside').addEventListener('click', function() {
+  	var toggleright= document.querySelector(".rs")
+  	toggleright.classList.toggle("togglerightside")
+});
 
 
 //render the calorie header
-function renderCalHeader() {
+	function renderCalHeader() {
+		if(foods.totalc > 1500) { //if over limit
+		var tag= document.getElementById("calorieheader")
+		tag.classList.add("over-limit")
+		}
+	
+		if(foods.totalc >= 0) {
 
-	// if(foods.totalc >= 0) {
-	var mab = document.getElementsByClassName("limit");
+		if(foods.totalc <= 1500) {
+			var tag= document.getElementById("calorieheader")
+		tag.classList.remove("over-limit")
+		}
+		var mab = document.getElementsByClassName("limit");
    			for (var i = 0; i < mab.length; i++) {
       		mab[i].style.display = "none"; }   
 			document.getElementsByClassName("limit").innerHTML = "";
@@ -173,5 +188,60 @@ function renderCalHeader() {
 			limit.appendChild(leemet)
 			document.getElementById("calorieheader").appendChild(limit)
 
-	// }
+
+		} else {
+			var mab = document.getElementsByClassName("limit");
+   			for (var i = 0; i < mab.length; i++) {
+      		mab[i].style.display = "none"; }   
+			console.log("?")
+			var limit=  document.createElement("p")
+			limit.className = "limit"
+			var leemet = document.createTextNode(foods.totalc + " Calories")
+			limit.appendChild(leemet)
+			document.getElementById("calorieheader").appendChild(limit)
+	}
 } }
+
+	function renderCalInfo() {
+		//Calories In
+		var removePrevious = document.querySelector(".cIn").innerHTML = "";
+		var calsIn = document.getElementsByClassName("cIn")[0];
+		var td=  document.createElement("td")
+		var text = document.createTextNode(foods.totalc)
+		td.appendChild(text)
+		calsIn.appendChild(td)
+
+		//Calories Left
+		var removePrevious = document.querySelector(".cLeft").innerHTML = "";
+		var calsLeft = document.getElementsByClassName("cLeft")[0];
+
+		
+		console.log(calsLeft)
+		var td=  document.createElement("td")
+		var caloriesLeft = limit - foods.totalc
+		var text = document.createTextNode(caloriesLeft)
+		td.appendChild(text)
+		calsLeft.appendChild(td)
+		if (foods.totalc > limit) {
+			calsLeft.style.color="red";
+		}
+	}
+
+// 	document.getElementsByClassName('tolist')[0].addEventListener('click', function() {
+//   		var td=  document.createElement("p")
+// 		var text = document.createTextNode("caloriesLeft")
+// 		td.appendChild(text)
+// 		this.appendChild(td)
+// });
+
+var entries = document.querySelectorAll("li");
+
+for(var i=0; i < entries.length; i++) {
+	entries[i].addEventListener("click", function(){
+		if(this.style.height !== "300px") {
+		this.style.height="300px";
+	} else {
+		this.style.height="60px";
+	}
+	})
+}
