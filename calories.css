@@ -7,7 +7,7 @@ body {
 
 	.form-control {
 		max-width: 1300px;
-		width:50%;
+		width:45%;
 		display:inline;
 		margin:10px;
 		background: none;
@@ -23,11 +23,12 @@ body {
 	}
 	#todos ul {
 		padding-left:0;
+		-webkit-animation: fadein 1s;
 	}
 
 	#ultodos:empty:before {
    		content: 'Come on, add some Food!';
-   		margin: 12%;
+   		margin:12%;
 }
 .navbar {
     border-radius: 0px;
@@ -43,14 +44,16 @@ body {
 		text-decoration:none;
 		overflow:hidden;
 		min-height:60px;
-	
+		border-radius:5px;
 		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
 	}
 	.btn {
 		float:right;
 		padding:5px 10px;
 		border-radius:50px;
 	}
+
 	#new {
 		margin-top:11px;
 		background: none;
@@ -113,6 +116,9 @@ body {
 	.buttons {
 		display:none;
 	}
+	.btnshow {
+		display:block;
+	}
 	.btn-outline-primarymade {
 		margin-right:10px;
 		margin-top:12px;
@@ -130,24 +136,34 @@ body {
 		border-color: green;
 	}
 
+	#toggleside {
+		text-align:center;
+	}
+
+	.rs {
+		display:none;
+	}
+
 	#rightside {
 		background: #fff;
-		margin-left:auto;
-		margin-right:auto;
-		
-		width:95%;
+		/*margin-left:auto;
+		margin-right:auto;*/
+		width:100%;
 		list-style-type: none;
 		padding:0px 15px;
 		text-decoration:none;
 		overflow:hidden;
 		min-height:60px;
-	
+		border-radius:5px;
 		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 	}
-
+	.togglerightside {
+		display:block;
+	}
 	#rightside h2 {
 		text-align:center;
 		margin-top:15px;
+		font-size:1.7em;
 	}
 
 	hr {
@@ -155,12 +171,15 @@ body {
 		margin-top:0;
 		border-top: lightblue 1px solid;
 	}
-	.calinfo h3 {
-		
-		
-	}
 	.mytable {
 		width:100%;
+	}
+	
+	.cIn {
+		float:right;
+	}
+	.cLeft {
+		float:right;
 	}
 	.calinfo p {
 		float:right;
@@ -177,6 +196,9 @@ body {
 	
 		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 	}
+	.over-limit p {
+		color:red;
+	}
 	#calorieheader h3 {
 		margin-top:15px;
 		margin-right:5px;
@@ -188,20 +210,7 @@ body {
 		float:right;
 		font-size:20px;
 	}
-
-/*	.tolist {
-  animation-duration: .7s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left:100%;
-    width: 100%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}*/
+	@keyframes fadein {
+    		from { opacity: 0; }
+    		to   { opacity: 1; }
+		}
