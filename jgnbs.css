@@ -1,11 +1,14 @@
 body {
-  	margin: 0;
+    margin: 0;
+
 }
 .classbody.responsive {
   background: black;
 }
 .thumbnail.responsive {
-  background: black;
+  background: none;
+  border: 1px solid black;
+  border-radius:5px;
 }
 .topnav {
   overflow: hidden;
@@ -54,7 +57,6 @@ body {
 .jumbotron {
   padding-top: 70px;
   padding-bottom: 30px;
-  margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
   background-image: url(https://wallpapercave.com/wp/Wa1UXUT.jpg);
@@ -64,9 +66,9 @@ body {
 }
 
 .container {
-	margin-left: auto;
-	margin-right:auto;
-	width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  width: 75%;
 }
 
 .container h2 {
@@ -74,16 +76,19 @@ body {
   font-size: 63px;
   font-family: Raleway;
   margin:0;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
 /*.gallery img {
-	width:30%;
-	
-	margin: 1%;
-	display: inline-block;
+  width:30%;
+  
+  margin: 1%;
+  display: inline-block;
 }*/
 .home {
-	height:900px;
+  height:900px;
 }
 
 .thumbnail {
@@ -93,12 +98,13 @@ body {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: none;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border .2s ease-in-out;
   -o-transition: border .2s ease-in-out;
   transition: border .2s ease-in-out;
+  -webkit-animation: fadein 1s;
 }
 
 .thumbnail .caption {
@@ -113,10 +119,13 @@ body {
   text-align: left;
 }
 .caption p {
-	width:50px;
-	margin:0;
+  width:50px;
+  margin:0;
 }
-
+@keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
 /*MOBILE*/
 
 /*for the gallery*/
@@ -137,7 +146,7 @@ body {
 @media screen and (max-width: 600px) {
 
 .topnav a:not(:first-child) {
-	display: none;
+  display: none;
 }
 
 .topnav a.icon {
@@ -149,22 +158,21 @@ body {
   width:95%;
 }
 .container h2 {
-	font-size: 36px;
+  font-size: 36px;
 }
 
 .thumbnail {
-	width: 100%;
-	max-width: 95%;
+  width: 100%;
+  max-width: 95%;
 }
 
 .jumbotron {
-	height:600px;
+  height:600px;
 }
 }
 
 @media screen and (max-width: 600px) {
 
-	
  .topnav.responsive {
   position: fixed;
   background: black;
@@ -181,7 +189,7 @@ body {
  }
 
  .topnav.responsive a:not(:first-child) {
-  	background: rgb(40,40,40);
+    background: rgb(40,40,40);
  }
 
  .topnav.responsive a, .topnav.responsive .navright {
