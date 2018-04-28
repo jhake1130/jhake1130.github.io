@@ -130,9 +130,9 @@
 <div class="col-sm-9">
 
 	<div id="projects">
-		
+			<p>Click on a project!</p>
 			<div class="embed-responsive embed-responsive-16by9 project">
-  				<iframe class="embed-responsive-item" src="https://jhake1130.github.io/calorie.html"></iframe>
+  				<iframe class="embed-responsive-item" src=""></iframe>
 			</div>
 		</div>
 	</div>
@@ -141,6 +141,7 @@
 </div>
 
 <script type="text/javascript">
+	var projectP = document.querySelector("#projects p")
 	var project = document.querySelector(".embed-responsive-item");
 	var links = document.querySelectorAll(".pp");
 		links.forEach(function(button, index) {
@@ -154,6 +155,7 @@
    		if (index == 2) {
    			project.setAttribute("src", "https://jhake1130.github.io/halotop");
    		}
+   		projectP.style.display="none"
  		 });
 		});
 	
