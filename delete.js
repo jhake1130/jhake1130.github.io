@@ -14,20 +14,17 @@ $(document).ready(function(){
 
 function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
+    x.classList.toggle("responsive")
 }
+
 
 function darktheme() {
   var x = document.getElementById("bodydark");
-   if (x.className === "classbody") {
-        x.className += " responsive";
-    } 
-      else {
-        x.className = "classbody";
-    }
+  var y = document.querySelectorAll(".thumbnail");
+  for(var i=0; i <y.length; i++) {
+    y[i].classList.toggle("responsive")
+  }
+    x.classList.toggle("responsive")
 
 }
+
