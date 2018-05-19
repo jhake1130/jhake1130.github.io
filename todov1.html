@@ -82,7 +82,7 @@ input {
 	margin: 0 auto;
 }
 
-.addbutton {
+/*.addbutton {
 	position: absolute;
   	top: 5px;
   	right: 5px;
@@ -97,7 +97,7 @@ input {
  	background: rgba(255,255,255, 0.3);
     font-size:20px;
     font-weight:bold;
-}
+}*/
 
 .ul_header {
 	color: white;
@@ -115,7 +115,11 @@ input {
 	float: right;
 }
 
-.buttons:hover, .buttons:active {
+li:hover .buttons {
+	opacity: 1;
+}
+
+li:active .buttons {
 	opacity: 1;
 }
 
@@ -129,7 +133,7 @@ input {
 <body>
 <header>
 	<input type="text" id="inputTODO" placeholder="enter todo">
- 	<button class="addbutton">+ </button>
+ 	<!-- <button class="addbutton">+ </button> -->
 </header>
 
 <div class="container">
@@ -139,7 +143,7 @@ input {
 
 	<hr class="line">
 
-	<p class="ul_header">Completed</p>
+	<p class="ul_header">Completed +</p>
 		<ul class="completed">
 		</ul>
 </div>
