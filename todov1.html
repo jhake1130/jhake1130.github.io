@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<style>
+html {
+	height:100%;
+}
+
+body {
+   	background: #232323;
+    background-size:cover;
+    margin:0;
+	height: 100%;
+ 	font-family: "Raleway";
+}
+
+header {
+	color:white;
+	line-height: 1.1;
+	text-align:center;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	padding: 0px 0  0;
+	overflow:hidden;
+}
+
+h1 {
+	margin:0;
+	padding-bottom:10px;
+	font-family: "Raleway","Avenier";
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+hr {
+	margin:0;
+}
+
+ul {
+	list-style-type: none;
+	padding-left:0;
+}
+
+li {
+	padding:20px 10px;
+	margin: 5px 0;
+	background: white;
+	border-radius:5px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	word-wrap: break-word;
+}
+
+form {
+	position:relative;
+	display:relative;
+	width:100%;
+	overflow:hidden;
+}
+
+input {
+	width:100%;
+	height:30px;
+	background: rgba(255, 255,255, 0.1);
+	border:none;
+	outline:none;
+	padding-left:10px;
+	height:50px;
+	color:white;
+  	font-size: 4.3vw;
+
+
+}
+
+.container {
+	max-width:600px;
+	width:90%;
+	margin: 0 auto;
+}
+
+.addbutton {
+	position: absolute;
+  	top: 5px;
+  	right: 5px;
+ 	display:block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    color:green;
+    border-radius: 50%;
+    border:none;
+    text-align:center;
+ 	background: rgba(255,255,255, 0.3);
+    font-size:20px;
+    font-weight:bold;
+}
+
+.ul_header {
+	color: white;
+}
+
+.line {
+	width:90%;
+	border: 0.3px solid white;
+	margin: 8px auto;
+}
+
+.buttons {
+	opacity:0;
+	display:inline;
+	float: right;
+}
+
+.buttons:hover, .buttons:active {
+	opacity: 1;
+}
+
+.buttons button {
+	background:none;
+	border:none;
+	padding-right:10px;
+}
+
+</style>
+<body>
+<header>
+	<input type="text" id="inputTODO" placeholder="enter todo">
+ 	<button class="addbutton">+ </button>
+</header>
+
+<div class="container">
+	<p class="ul_header">Todo</p>
+		<ul class="uncompleted">
+		</ul>
+
+	<hr class="line">
+
+	<p class="ul_header">Completed</p>
+		<ul class="completed">
+		</ul>
+</div>
+
+  
+
+<script>
+var todos  =(localStorage.getItem('todoListBOY')) ? JSON.parse(localStorage.getItem('todoListBOY')): {
+	uncompleted: [],
+	completed: []
+}
+
+var todo = "todo";
+var done = "completed";
+var input = document.querySelector("#inputTODO");
+var ulUncompleted = document.querySelector(".uncompleted")
+var ulHeader = document.querySelectorAll(".ul_header")
+var ulCompleted = document.querySelector(".completed")
+
+init()
+
+	input.addEventListener('keypress', function (e) {
+ 		var key = e.which || e.keyCode;
+    	if (key === 13) { 
+      		var inputValue = this.value
+      		todos.uncompleted.push(inputValue)
+      		dataObjectUpdated()
+    		addItemToDOM(inputValue, todo)
+      		input.value=""
+    	}
+	});
+
+	function addItemToDOM(item, type) {
+		var inputValue = item;
+      	var list = document.createElement("li")
+    	var buttons = document.createElement("div")
+    	buttons.className = "buttons"
+    	
+    	if (type !== "completed") {	
+    		var addToComplete = document.createElement("button")
+    		addToComplete.innerHTML = "<i class='fas fa-check'></i>"
+    			addToComplete.addEventListener("click", function() {
+    				todos.completed.push(inputValue)
+  					addItemToDOM(inputValue, done)
+    				todos.uncompleted.splice(todos.uncompleted.indexOf(inputValue), 1);
+    				var toRemove = this.parentNode.parentNode;
+    				toRemove.remove()
+    				dataObjectUpdated()
+			})
+    	buttons.appendChild(addToComplete)
+    }
+
+	var remove = document.createElement("button")
+    remove.innerHTML = "<i class='fas fa-trash-alt'></i>"
+    	remove.addEventListener("click", function() {
+	  		if(type == "completed") {
+				todos.completed.splice(todos.completed.indexOf(inputValue), 1);
+	    	} 
+	    	else {
+	    		todos.uncompleted.splice(todos.uncompleted.indexOf(inputValue), 1);
+	    	}
+	    	var toRemove = this.parentNode.parentNode;
+	    	toRemove.remove()
+	    	dataObjectUpdated()
+    	})
+
+    var text = document.createTextNode(inputValue);
+    list.appendChild(text)
+    buttons.appendChild(remove)
+    list.appendChild(buttons)
+    	if(type == todo) {
+      		ulUncompleted.appendChild(list)
+      		if(todos.uncompleted.length == 1) {
+      			ulHeader[0].innerText ="Todo"
+  			} else {
+  				ulHeader[0].innerText ="Todos"
+  			}
+  	 	}
+
+  	 	else if(type == "completed") {
+  	 		ulHeader[1].addEventListener("click", function() {
+  	 			if(ulCompleted.style.display=="none") {
+  	 				ulCompleted.style.display="block"
+  	 			} else {
+  	 				ulCompleted.style.display="none"	
+  	 			}
+			})
+
+  	 		ulCompleted.style.display="block"
+  	 		ulCompleted.appendChild(list)
+  	 }
+  }
+ 
+function init() {
+	if(todos.uncompleted.length > 0 || todos.completed.length > 0) {
+ 		if(todos.uncompleted.length > 0) {
+ 			for(var i=0; i < todos.uncompleted.length; i++) {
+ 				addItemToDOM(todos.uncompleted[i], todo)	
+ 			}
+ 		}
+
+ 		if(todos.completed.length >0) {
+ 			for(var i=0; i < todos.completed.length; i++) {
+ 				addItemToDOM(todos.completed[i], done)
+ 			}
+ 		}
+ 	}
+ }
+
+
+ulCompleted.style.display="none"
+
+if(todos.uncompleted.length == 0) {
+	ulHeader[0].innerHTML ="<p class='ul_header'>Nothing todo!</p>"
+}
+
+function dataObjectUpdated() {
+  		localStorage.setItem('todoListBOY', JSON.stringify(todos));
+  		
+	}
+
+
+</script>
+</body>
+</html>
