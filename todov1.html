@@ -27,6 +27,10 @@ header {
 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	padding: 0px 0  0;
 	overflow:hidden;
+	position: fixed;
+	top: 0;
+	left:0;
+	right:0;
 }
 
 h1 {
@@ -80,6 +84,7 @@ input {
 	max-width:600px;
 	width:90%;
 	margin: 0 auto;
+	margin-top: 70px;
 }
 
 /*.addbutton {
@@ -123,7 +128,7 @@ li:active .buttons {
 	opacity: 1;
 }
 
-	li:focus .buttons {
+li:focus .buttons {
 	opacity: 1;
 }
 .buttons button {
@@ -131,6 +136,11 @@ li:active .buttons {
 	border:none;
 	padding-right:10px;
 }
+@media screen and (max-width: 450px) {
+  .buttons {
+  	opacity: 1;
+  }
+
 
 </style>
 <body>
