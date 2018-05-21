@@ -188,10 +188,13 @@ li:focus .buttons {
 	padding:13px 15px;
 }
 
+.activeli {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
 .my-modal {
 	display:none;
 	position: fixed;
-	z-index: 1;
+	/*z-index: 1;*/
 	left: 0;
 	top: 0;
 	width:100%;
@@ -265,25 +268,28 @@ var todo = "todo";
 var done = "completed";
 var addNote = document.querySelector(".add-notes")
 
+var addIcon = document.querySelector(".addI")
 var modal = document.querySelector(".my-modal")
-var input = document.querySelector("#inputTODO");
+var input = document.querySelectorAll("#inputTODO");
 var ulUncompleted = document.querySelector(".uncompleted")
 var ulHeader = document.querySelectorAll(".ul_header")
 var ulCompleted = document.querySelector(".completed")
 
 
-addNote.addEventListener("click", function(){
-    
-    if (modal.style.display === "block") {
+function addFUCKIDK () {
+	if (modal.style.display === "block") {
         modal.style.display = "none";
+        addIcon.classList.remove("activeli");
+
     } else {
         modal.style.display = "block";
+        addIcon.classList.add("activeli")
     }
-
-})
+}
+addNote.addEventListener("click",addFUCKIDK)
 init()
 
-	input.addEventListener('keypress', function (e) {
+	input[1].addEventListener('keypress', function (e) {
  		var key = e.which || e.keyCode;
     	if (key === 13) { 
       		var inputValue = this.value
