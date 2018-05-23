@@ -11,7 +11,6 @@
 html {
 	height:100%;
 }
-
 body {
    	background: #232323;
     background-size:cover;
@@ -20,11 +19,12 @@ body {
  	font-family: "Raleway";
 }
 
+
 header {
 	color:white;
 	line-height: 1.1;
 	text-align:center;
-	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	background: rgba(64,64,64, 1);
 	padding: 0px 0  0;
 	overflow:hidden;
 	position: fixed;
@@ -32,8 +32,8 @@ header {
 	left:0;
 	right:0;
 	width:100%;
+	height:50px;
 }
-
 footer {
 	width:100%;
 	height:50px;
@@ -41,7 +41,6 @@ footer {
 	bottom:0;
 	background: rgba(64,64,64, 1);
 }
-
 footer li {
 	display:inline-block;
 	padding: 0;
@@ -54,7 +53,6 @@ footer li {
 	background: rgba(64,64,64, 1);
 	color:white;
 }
-
 h1 {
 	margin:0;
 	padding-bottom:10px;
@@ -62,25 +60,24 @@ h1 {
 	font-weight: normal;
 	text-transform: uppercase;
 }
-
 hr {
 	margin:0;
 }
-
 ul {
 	list-style-type: none;
 	padding-left:0;
+	
 }
-
 li {
+	
 	padding:20px 10px;
-	margin: 5px 0;
+	margin: 0px 0 8px 0;
 	background: white;
 	border-radius:5px;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 	word-wrap: break-word;
+	-webkit-animation: fadeIn 2s;
 }
-
 p {
 	color:white;
 }
@@ -91,31 +88,11 @@ form {
 	overflow:hidden;
 }
 
-input {
-	width:100%;
-	height:30px;
-	background: rgba(255, 255,255, 0.1);
-	border:1px solid grey;
-	outline:none;
-	padding-left:10px;
-	height:50px;
-	/*color:white;*/
-  	font-size: 4.3vw;
-
-
-}
-
 .container {
 	max-width:600px;
 	width:90%;
 	margin: 0 auto;
 	margin-top: 70px;
-}
-
-
-.modal-content {
-	width:90%;
-	margin: 0 auto;
 }
 
 .addbutton {
@@ -135,31 +112,25 @@ input {
     font-size:20px;
     font-weight:bold;
 }
-
 .ul_header {
 	color: white;
 }
-
 .line {
 	width:90%;
 	border: 0.3px solid white;
 	margin: 8px auto;
 }
-
 .buttons {
 	opacity:0;
 	display:inline;
 	float: right;
 }
-
 li:hover .buttons {
 	opacity: 1;
 }
-
 li:active .buttons {
 	opacity: 1;
 }
-
 li:focus .buttons {
 	opacity: 1;
 }
@@ -168,7 +139,6 @@ li:focus .buttons {
 	border:none;
 	padding-right:10px;
 }
-
 .add-notes {
 	/*background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
 	border-radius:1px;
@@ -179,7 +149,6 @@ li:focus .buttons {
 	/*position:absolute;
 	margin-top:-5px;*/
 }
-
 .addI {
 		border: 2px solid #1fc8db;
 /* 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
@@ -187,110 +156,141 @@ li:focus .buttons {
 	
 	padding:13px 15px;
 }
-
 .activeli {
 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.activeli_icon {
+	color: #1fc8db;
 }
 .my-modal {
 	display:none;
 	position: fixed;
-	/*z-index: 1;*/
 	left: 0;
 	top: 0;
 	width:100%;
 	height:92%;
 	background: rgba(0,0,0,0.85);
+		 animation-name: example;
+    animation-duration: 0.5s;    
+    animation-fill-mode: forwards;
 }
-
 .my-modal input {
 	background: white;
 	padding:0;
+	height:40px;
+	width:100%;
+	border-radius:3px;
+	border:none;
+	outline:none;
+	overflow:hidden;
+
 }
 .modalidk {
 	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-	padding-top:30px;
+	padding-top:10px;
 	padding-bottom:10px;
-	border-radius:0 3px 3px 0;
+	border:none;
+	transition: background 0.5s;
+
 }
 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes example {
+    from {top: -30px;}
+    to {top: 0px; 	background: rgba(0,0,0,0.85);
+;}
+
+
+}
+.modal-content {
+	width:90%;
+	margin: 0 auto;
+}
 @media screen and (max-width: 450px) {
   .buttons {
   	opacity: 1;
   }
-
-
 </style>
 <body>
 <header>
-	<input type="text" id="inputTODO" placeholder="enter todo">
- 	<!-- <button class="addbutton">+ </button> -->
+	<p>Home</p>
 </header>
-
 <div class="my-modal">
 <div class="modalidk">
 <div class="modal-content">
-<input type="text" id="inputTODO" placeholder="enter todo">
-<button class="addbutton"></button>
-</div>
-</div>
+<input type="text" id="inputTODO">
 
+</div>
+</div>
 </div>
 <div class="container">
 	<p class="ul_header">Todo</p>
 		<ul class="uncompleted">
 		</ul>
-
 	<hr class="line">
-
 	<p class="ul_header">Completed +</p>
 		<ul class="completed">
 		</ul>
 </div>
-
 <footer>
-	<li><i class="fas fa-home"></i></li
-	><li><i class="fas fa-search"></i></li
-		><li class="add-notes"><i class="fas fa-plus addI"></i></li
-		><li class="after-add"><i class="fas fa-star"></i></li
-		><li><i class="fas fa-user"></i></li>
-
+	<li><i class="fas fa-home" id="footer_links"></i></li
+	><li><i class="fas fa-search" id="footer_links"></i></li
+		><li class="add-notes"><i class="fas fa-plus addI" id="footer_links"></i></li
+		><li class="after-add"><i class="fas fa-star" id="footer_links"></i></li
+		><li><i class="fas fa-user" id="footer_links"></i></li>
 	</footer>
-
   
-
 <script>
 var todos  =(localStorage.getItem('todoListBOY')) ? JSON.parse(localStorage.getItem('todoListBOY')): {
 	uncompleted: [],
 	completed: []
 }
-
 var todo = "todo";
 var done = "completed";
+var links = document.querySelectorAll("#footer_links")
 var addNote = document.querySelector(".add-notes")
-
 var addIcon = document.querySelector(".addI")
 var modal = document.querySelector(".my-modal")
-var input = document.querySelectorAll("#inputTODO");
+var modalbody= document.querySelector(".modalidk")
+var input = document.querySelector("#inputTODO");
 var ulUncompleted = document.querySelector(".uncompleted")
 var ulHeader = document.querySelectorAll(".ul_header")
 var ulCompleted = document.querySelector(".completed")
 
-
+function randomColor(){
+	//pick a "red" from 0-255
+	var red = Math.floor(Math.random() * 256 );
+	//pick a "green" from 0-255
+	var green = Math.floor(Math.random() * 256 );
+	//pick a "blue" from 0-255
+	var blue = Math.floor(Math.random() * 256 );
+	return "rgb(" + red + ", " + green + ", " + blue + ")"; //will return all the random numbers into one string
+}
 function addFUCKIDK () {
 	if (modal.style.display === "block") {
         modal.style.display = "none";
         addIcon.classList.remove("activeli");
+        links[0].classList.add("activeli_icon")
 
     } else {
         modal.style.display = "block";
         addIcon.classList.add("activeli")
+        links[0].classList.remove("activeli_icon")
     }
 }
+
+links[0].classList.add("activeli_icon")
 addNote.addEventListener("click",addFUCKIDK)
 init()
-
-	input[1].addEventListener('keypress', function (e) {
+	input.addEventListener('keypress', function (e) {
  		var key = e.which || e.keyCode;
+ 		if(key) {
+ 			
+ 			modalbody.style.background = randomColor()
+ 		}
+ 		console.log(e)
     	if (key === 13) { 
       		var inputValue = this.value
       		todos.uncompleted.push(inputValue)
@@ -300,7 +300,6 @@ init()
 		addFUCKIDK()
     	}
 	});
-
 	function addItemToDOM(item, type) {
 		var inputValue = item;
       	var list = document.createElement("li")
@@ -320,7 +319,6 @@ init()
 			})
     	buttons.appendChild(addToComplete)
     }
-
 	var remove = document.createElement("button")
     remove.innerHTML = "<i class='fas fa-trash-alt'></i>"
     	remove.addEventListener("click", function() {
@@ -334,7 +332,6 @@ init()
 	    	toRemove.remove()
 	    	dataObjectUpdated()
     	})
-
     var text = document.createTextNode(inputValue);
     list.appendChild(text)
     buttons.appendChild(remove)
@@ -347,16 +344,16 @@ init()
   				ulHeader[0].innerText ="Todos"
   			}
   	 	}
-
   	 	else if(type == "completed") {
   	 		ulHeader[1].addEventListener("click", function() {
   	 			if(ulCompleted.style.display=="none") {
   	 				ulCompleted.style.display="block"
+  	 				ulHeader[1].innerText = "Completed -"
   	 			} else {
-  	 				ulCompleted.style.display="none"	
+  	 				ulCompleted.style.display="none"
+  	 				ulHeader[1].innerText = "Completed +"	
   	 			}
 			})
-
   	 		ulCompleted.style.display="block"
   	 		ulCompleted.appendChild(list)
   	 }
@@ -369,7 +366,6 @@ function init() {
  				addItemToDOM(todos.uncompleted[i], todo)	
  			}
  		}
-
  		if(todos.completed.length >0) {
  			for(var i=0; i < todos.completed.length; i++) {
  				addItemToDOM(todos.completed[i], done)
@@ -377,20 +373,14 @@ function init() {
  		}
  	}
  }
-
-
 ulCompleted.style.display="none"
-
 if(todos.uncompleted.length == 0) {
 	ulHeader[0].innerHTML ="<p class='ul_header'>Nothing todo!</p>"
 }
-
 function dataObjectUpdated() {
   		localStorage.setItem('todoListBOY', JSON.stringify(todos));
   		
 	}
-
-
 </script>
 </body>
 </html>
