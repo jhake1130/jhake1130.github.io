@@ -76,7 +76,7 @@ li {
 	border-radius:5px;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 	word-wrap: break-word;
-	-webkit-animation: fadeIn 2s;
+	-webkit-animation: fadeIn 0.5s;
 }
 p {
 	color:white;
@@ -183,6 +183,7 @@ li:focus .buttons {
 	border:none;
 	outline:none;
 	overflow:hidden;
+	font-size:1.4em;
 
 }
 .modalidk {
@@ -272,12 +273,12 @@ function addFUCKIDK () {
 	if (modal.style.display === "block") {
         modal.style.display = "none";
         addIcon.classList.remove("activeli");
-        links[0].classList.add("activeli_icon")
+        
 
     } else {
         modal.style.display = "block";
         addIcon.classList.add("activeli")
-        links[0].classList.remove("activeli_icon")
+        
     }
 }
 
@@ -373,6 +374,26 @@ function init() {
  		}
  	}
  }
+
+links.forEach(function(link,index) {
+	link.addEventListener("click", function() {
+		
+		for(var i=0; i < links.length; i++) {
+			links[i].classList.remove("activeli_icon")
+		}
+		if(modal.style.display == "block") {
+			addFUCKIDK()
+		}
+		link.classList.add("activeli_icon")
+		if(index == 2) {
+			link.classList.remove("activeli_icon")
+			
+		
+		}
+ 		
+	})
+})
+
 ulCompleted.style.display="none"
 if(todos.uncompleted.length == 0) {
 	ulHeader[0].innerHTML ="<p class='ul_header'>Nothing todo!</p>"
