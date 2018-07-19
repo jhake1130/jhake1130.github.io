@@ -1,8 +1,6 @@
 var foods =(localStorage.getItem('todoLista')) ? JSON.parse(localStorage.getItem('todoLista')): {
 	food: []
 };
-var limit = 1500;
-
 
 
 	function dataObjectUpdated() {
@@ -90,14 +88,19 @@ var limit = 1500;
 
 		console.log(amount + "ad")
 
-		for(var i=0; i < amount; i++) {
+		for(var i=0; i < 1; i++) {
 			var ulLI = document.createElement("li")
-			ulLI.innerText =  food + " " + i
+			ulLI.innerHTML = "<p class='deletethis'>Delete</p>"
 			ul.appendChild(ulLI)
 			ulLI.addEventListener("click", function() {
-				console.log(this.innerText)
-
-				console.log(this.parentNode.parentNode)
+				console.log(food)
+				var indexOfFood = foods.food.findIndex(x => x.Name === food);
+				console.log(indexOfFood)
+				var minusOne = 1
+				var minusTHIS = foods.food[indexOfFood].Amount - minusOne;
+				console.log(minusTHIS)
+				foods.food[indexOfFood].Amount = minusTHIS;
+				dataObjectUpdated();
 			})
 
 		}
@@ -107,6 +110,14 @@ var limit = 1500;
 				var foodName = document.createTextNode(food);
 console.log(foodName)	
 				name.appendChild(foodName);
+
+
+				var counter =document.createElement("div")
+		counter.className= "cals"
+
+				counter.innerText=amount
+				list.appendChild(counter)
+
 				list.appendChild(name)
 				div.appendChild(list)
 				
@@ -216,7 +227,6 @@ listenerToList.forEach(function(link,index) {
  		
 	})
 })
-
 
 
 
