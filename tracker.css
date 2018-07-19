@@ -1,0 +1,271 @@
+body {
+		background: #f2f2f2;
+		background: #FF5F6D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+	.navbar-toggle {
+		display:block;
+	}
+nav p {
+	display:inline-block;
+}
+.main {
+	margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+.reabitch {
+	display:none;
+}
+
+
+
+
+
+
+	.form-control {
+		max-width: 1300px;
+		width:68%;
+		display:inline;
+		margin:10px;
+		background: none;
+		border:.5px solid rgba(255,255,255,.1);
+		border-radius: 50px;
+	}
+	.form-control:focus {
+  		color: white;
+  		background-color: rgba(255,255,255,.2);
+  		border:none;
+  		outline: 0;
+  		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+	}
+	#todos ul {
+		padding-left:0;
+		-webkit-animation: fadein 1s;
+	}
+
+	
+}
+.navbar {
+    border-radius: 0px;
+}
+	#todos li {
+		background: #fff;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10px;
+		width:95%;
+		list-style-type: none;
+		/*padding:15px;*/
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+		border-radius:5px;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
+	}
+	.btn {
+		float:right;
+		padding:5px 10px;
+		border-radius:50px;
+	}
+
+	#new {
+		margin-top:11px;
+		background: none;
+		padding:0;
+		padding-top: 4px;
+		padding-bottom: 13px;
+		border-radius:40px;
+		font-weight:bold;
+		color: #007bff;
+		background-color: transparent;
+		background-image: none;
+		border-color: none;
+		width:30px;
+		height:30px;
+	}
+	#delete2 {
+		margin-top:11px;
+		background: none;
+		padding:0;
+		padding-top: 4px;
+		padding-bottom: 13px;
+		border-radius:50px;
+		font-weight:bold;
+		color: red;
+		background-color: transparent;
+		background-image: none;
+		border-color: none;
+		width:30px;
+		height:30px;
+	}
+	#delete {
+		background:white;
+		border-radius:50px;
+		line-height: 50px
+		padding: 0px;
+		width: 40px;
+		height: 40px;
+		font-weight:bold;
+	}
+	.navbar-default {
+		/*background: #fcfdff;*/
+	}
+	.bg-primary {
+		/*delete margin if i dont keep header*/
+		margin-bottom:0; 
+		background:#24292e;
+	}
+	.cals {
+		float:right;
+		border-left:1px solid lightblue;
+		padding:20px;
+		height:60px;
+	}
+	.itemn {
+		float:left;
+		padding:20px;
+		height:60px;
+
+	}
+	.buttons {
+		display:none;
+	}
+	.btnshow {
+		display:block;
+	}
+	.btn-outline-primarymade {
+		margin-right:10px;
+		margin-top:12px;
+		color: red;
+		background-color: transparent;
+		background-image: none;
+		border-color: red;
+	}
+	.btn-outline-database {
+		margin-right:10px;
+		margin-top:12px;
+		color: green;
+		background-color: transparent;
+		background-image: none;
+		border-color: green;
+	}
+
+	#toggleside {
+		text-align:center;
+	}
+
+	.rs {
+		display:none;
+	}
+
+	#rightside {
+		background: #fff;
+		/*margin-left:auto;
+		margin-right:auto;*/
+		width:100%;
+		list-style-type: none;
+		padding:0px 15px;
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+		border-radius:5px;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	}
+	.togglerightside {
+		display:block;
+	}
+	#rightside h2 {
+		text-align:center;
+		margin-top:15px;
+		font-size:1.7em;
+	}
+
+	hr {
+		width:90%;
+		margin-top:0;
+		border-top: lightblue 1px solid;
+	}
+	.mytable {
+		width:100%;
+	}
+	
+	.cIn {
+		float:right;
+	}
+	.cLeft {
+		float:right;
+	}
+	.calinfo p {
+		float:right;
+	}
+	#calorieheader {
+		background: #fff;
+		margin-bottom:10px;
+		width:100%;
+		list-style-type: none;
+		padding:0px 15px;
+		text-decoration:none;
+		overflow:hidden;
+		min-height:60px;
+	
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	}
+	.over-limit p {
+		color:red;
+	}
+	#calorieheader h3 {
+		margin-top:15px;
+		margin-right:5px;
+		display:inline-block;
+	}
+	#calorieheader p {
+		margin-top:17px;
+		display:inline;
+		float:right;
+		font-size:20px;
+	}
+
+
+
+
+
+
+
+.idk {
+	
+}
+#collapsenigga {
+	width:90%;
+
+}
+
+#collapsenigga li {
+	width:99%;
+	    text-align: center;
+    margin: auto 0;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+    border-radius:0px 0px 4px 4px;
+}
+
+
+
+
+
+
+	@keyframes fadein {
+    		from { opacity: 0; }
+    		to   { opacity: 1; }
+		}
