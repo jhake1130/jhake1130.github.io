@@ -1,4 +1,4 @@
-var foods =(localStorage.getItem('tracker')) ? JSON.parse(localStorage.getItem('tracker')): {
+var foods =(localStorage.getItem('todoLista')) ? JSON.parse(localStorage.getItem('todoLista')): {
 	food: []
 };
 var limit = 1500;
@@ -6,7 +6,7 @@ var limit = 1500;
 
 
 	function dataObjectUpdated() {
-  		localStorage.setItem('tracker', JSON.stringify(foods));
+  		localStorage.setItem('todoLista', JSON.stringify(foods));
   		console.log(foods.food)
 	}
 
@@ -272,4 +272,5 @@ listenerToList.forEach(function(link,index) {
 // 	}
 // 	})
 // }
+
 
