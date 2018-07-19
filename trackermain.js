@@ -25,8 +25,9 @@ var limit = 1500;
 		for (var i = 0; i < foods.food.length; i++) {
 
     		var foodname = foods.food[i].Name;
+    		var amount = foods.food[i].Amount;
     		console.log(foods.food[i])
-			addItemToDOM(foodname);
+			addItemToDOM(foodname, amount);
   		}
 
   		// var wIL = foods.food.length;
@@ -41,23 +42,24 @@ var limit = 1500;
 
 		var foodname = foodValue.value
 
+		if(foodname == "erase") {
+			console.log("yes")
+			for (var i=0; i < foods.food.length; i++) {
+				foods.food.pop()
+
+			}
+			dataObjectUpdated();
+			return
+		}
 
 
 		var Food = {
-			Name: foodname
+			Name: foodname,
+			Amount: 12
 		}
-		for(var i=0; i <=12; i++) {
-			// if( i <=1) {
-			// var foodnew = {
-			// 	Name: foodname
-			// }
-			
-		}
-			console.log(foodname + " " + i)
-			// foods.food.push(foodname + " " + i)
-		
+		var amount = Food.Amount
 		foods.food.push(Food)
-		console.log(Food)
+		
 
 		// foods.food.push(foodname);
 		
@@ -65,7 +67,7 @@ var limit = 1500;
 		
 
 		
-		addItemToDOM(foodname);
+		addItemToDOM(foodname,amount,3);
 		
 		document.getElementById("foodValue").value=''; //returns add input blank
 		dataObjectUpdated();
@@ -75,7 +77,7 @@ var limit = 1500;
 
 //add food to page
 
-	function addItemToDOM(food,index) {
+	function addItemToDOM(food,amount,index) {
 			
 		var div = document.createElement("div"); 
 		div.className = "idk";
@@ -86,16 +88,22 @@ var limit = 1500;
 		var ul = document.createElement("ul");
 		ul.setAttribute("id", "collapsenigga");
 
+		console.log(amount + "ad")
 
-		for(var i=0; i < 3; i++) {
+		for(var i=0; i < amount; i++) {
 			var ulLI = document.createElement("li")
-			ulLI.innerText =  food + i
-			console.log("df")
+			ulLI.innerText =  food + " " + i
 			ul.appendChild(ulLI)
+			ulLI.addEventListener("click", function() {
+				console.log(this.innerText)
+
+				console.log(this.parentNode.parentNode)
+			})
+
 		}
 		
 		ul.className = "reabitch";
-		console.log(index)
+	
 				var foodName = document.createTextNode(food);
 console.log(foodName)	
 				name.appendChild(foodName);
@@ -103,23 +111,6 @@ console.log(foodName)
 				div.appendChild(list)
 				
 				div.appendChild(ul)
-
-	
-
-
-
-
-		// var list = document.createElement("li"); 
-		// list.className = "tolist";
-		// var item = document.createElement("div"); 
-		// item.className = "itemn"
-
-
-		
-
-		// var foodName = document.createTextNode(food);
-		// item.appendChild(foodName); 
-		// list.appendChild(item);  
 		
 
 		document.getElementById("ultodos").appendChild(div);  
@@ -228,49 +219,6 @@ listenerToList.forEach(function(link,index) {
 
 
 
-//
-	// function renderCalInfo() {
-	// 	//Calories In
-	// 	var removePrevious = document.querySelector(".cIn").innerHTML = "";
-	// 	var calsIn = document.getElementsByClassName("cIn")[0];
-	// 	var td=  document.createElement("td")
-	// 	var text = document.createTextNode(foods.totalc)
-	// 	td.appendChild(text)
-	// 	calsIn.appendChild(td)
 
-	// 	//Calories Left
-	// 	var removePrevious = document.querySelector(".cLeft").innerHTML = "";
-	// 	var calsLeft = document.getElementsByClassName("cLeft")[0];
-
-		
-	// 	console.log(calsLeft)
-	// 	var td=  document.createElement("td")
-	// 	var caloriesLeft = limit - foods.totalc
-	// 	var text = document.createTextNode(caloriesLeft)
-	// 	td.appendChild(text)
-	// 	calsLeft.appendChild(td)
-	// 	if (foods.totalc > limit) {
-	// 		calsLeft.style.color="red";
-	// 	}
-	// }
-
-// 	document.getElementsByClassName('tolist')[0].addEventListener('click', function() {
-//   		var td=  document.createElement("p")
-// 		var text = document.createTextNode("caloriesLeft")
-// 		td.appendChild(text)
-// 		this.appendChild(td)
-// });
-
-// var entries = document.querySelectorAll("li");
-
-// for(var i=0; i < entries.length; i++) {
-// 	entries[i].addEventListener("click", function(){
-// 		if(this.style.height !== "300px") {
-// 		this.style.height="300px";
-// 	} else {
-// 		this.style.height="60px";
-// 	}
-// 	})
-// }
 
 
