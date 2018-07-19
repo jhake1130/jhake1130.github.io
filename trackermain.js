@@ -239,30 +239,30 @@ listenerToList.forEach(function(link,index) {
 
 
 //
-	function renderCalInfo() {
-		//Calories In
-		var removePrevious = document.querySelector(".cIn").innerHTML = "";
-		var calsIn = document.getElementsByClassName("cIn")[0];
-		var td=  document.createElement("td")
-		var text = document.createTextNode(foods.totalc)
-		td.appendChild(text)
-		calsIn.appendChild(td)
+// 	function renderCalInfo() {
+// 		//Calories In
+// 		var removePrevious = document.querySelector(".cIn").innerHTML = "";
+// 		var calsIn = document.getElementsByClassName("cIn")[0];
+// 		var td=  document.createElement("td")
+// 		var text = document.createTextNode(foods.totalc)
+// 		td.appendChild(text)
+// 		calsIn.appendChild(td)
 
-		//Calories Left
-		var removePrevious = document.querySelector(".cLeft").innerHTML = "";
-		var calsLeft = document.getElementsByClassName("cLeft")[0];
+// 		//Calories Left
+// 		var removePrevious = document.querySelector(".cLeft").innerHTML = "";
+// 		var calsLeft = document.getElementsByClassName("cLeft")[0];
 
 		
-		console.log(calsLeft)
-		var td=  document.createElement("td")
-		var caloriesLeft = limit - foods.totalc
-		var text = document.createTextNode(caloriesLeft)
-		td.appendChild(text)
-		calsLeft.appendChild(td)
-		if (foods.totalc > limit) {
-			calsLeft.style.color="red";
-		}
-	}
+// 		console.log(calsLeft)
+// 		var td=  document.createElement("td")
+// 		var caloriesLeft = limit - foods.totalc
+// 		var text = document.createTextNode(caloriesLeft)
+// 		td.appendChild(text)
+// 		calsLeft.appendChild(td)
+// 		if (foods.totalc > limit) {
+// 			calsLeft.style.color="red";
+// 		}
+// 	}
 
 // 	document.getElementsByClassName('tolist')[0].addEventListener('click', function() {
 //   		var td=  document.createElement("p")
