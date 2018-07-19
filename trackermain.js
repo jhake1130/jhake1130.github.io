@@ -6,7 +6,7 @@ var limit = 1500;
 
 
 	function dataObjectUpdated() {
-  		localStorage.setItem('todoLista', JSON.stringify(foods));
+  		localStorage.setItem('tracker', JSON.stringify(foods));
   		console.log(foods.food)
 	}
 
